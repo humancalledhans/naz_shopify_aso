@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 05:49:11 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/burgerprints-print-on-demand>; rel="canonical"
+Etag: W/"e3cdc9578d2c83c483596df4451444be"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=60acb1e7-b08b-4e52-991d-81e6acad9592; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:49:11 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=b0c7f6f9-d4fd-4f76-97eb-1401deaf4918; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 06:19:11 GMT; secure; SameSite=Lax
+Set-Cookie: _y=60acb1e7-b08b-4e52-991d-81e6acad9592; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:49:11 GMT; secure; SameSite=Lax
+Set-Cookie: _s=b0c7f6f9-d4fd-4f76-97eb-1401deaf4918; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 06:19:11 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=a64f03cc2931a28cfb7480bbfb08adc6; path=/; expires=Sat, 21 May 2022 16:18:17 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: a0adc455-3cce-4668-848a-2b3e790b8552
+X-Runtime: 0.344152
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=358, socket_queue;dur=2.059, edge;dur=2.059
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=a0adc455-3cce-4668-848a-2b3e790b8552
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=a0adc455-3cce-4668-848a-2b3e790b8552
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=lGySrlC3msEY1B%2BQ3sYbJqhyd%2FHB7XpUpUwkJFo967nBdKKaM0mNykpORDavjJl188m6trydi0F%2Bfwm%2B%2FW5R0k1LtQl6hhX2JZ7Hr3CQ8GwSy8cMHpXUFmw4ODZHgyPK6B8%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff3d5bf9a23289b-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

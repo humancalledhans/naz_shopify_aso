@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 08:48:42 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/collections/envios-mexico>; rel="canonical"
+Etag: W/"b069b791e7fa3236bb2befab52d8c108"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=c236e8af-7f71-497e-9991-f7cc83858ef6; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:48:41 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=0e3b4b68-0032-4cc7-860b-f4afa1eb488d; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:18:41 GMT; secure; SameSite=Lax
+Set-Cookie: _y=c236e8af-7f71-497e-9991-f7cc83858ef6; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:48:41 GMT; secure; SameSite=Lax
+Set-Cookie: _s=0e3b4b68-0032-4cc7-860b-f4afa1eb488d; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:18:41 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=0f9def186ab1e582848ba3f2a2366411; path=/; expires=Sat, 21 May 2022 19:17:47 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 7df77ebf-8dc5-4fd9-8edb-1f599687fa0e
+X-Runtime: 0.305383
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=338, socket_queue;dur=1.713, edge;dur=2.071
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=7df77ebf-8dc5-4fd9-8edb-1f599687fa0e
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=7df77ebf-8dc5-4fd9-8edb-1f599687fa0e
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=0gcUr0DQjHf%2BmlM4r5GAyIFPtu2qW2m8rquQ1nUSsppOJA9k8ElkpTMuUdmS3%2BeBYPpsIK1w9pOSHyrljvcQ7d0mML8T8guvlgzdQ1AX4o0mx8iFa4DHCwTwo0rFS%2FxW0xA%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff4dcb2edec7558-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

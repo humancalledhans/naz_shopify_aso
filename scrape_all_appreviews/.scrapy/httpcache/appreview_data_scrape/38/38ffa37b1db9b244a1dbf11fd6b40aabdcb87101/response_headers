@@ -1,0 +1,30 @@
+Date: Mon, 09 May 2022 06:10:16 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/product-description-show-more-show-less>; rel="canonical"
+Cache-Control: no-cache
+Set-Cookie: _shopify_y=30817d47-75bd-4979-bee7-864b494872bc; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:16 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=ffcd4e34-aac2-481d-ad82-0ed6f18c2979; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:16 GMT; secure; SameSite=Lax
+Set-Cookie: _y=30817d47-75bd-4979-bee7-864b494872bc; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:16 GMT; secure; SameSite=Lax
+Set-Cookie: _s=ffcd4e34-aac2-481d-ad82-0ed6f18c2979; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:16 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=47da925e74a2a95f3159a10dcb3188f9; path=/; expires=Wed, 08 Jun 2022 16:39:22 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: d73691be-d565-4a52-a6db-0f02a12c1532
+X-Runtime: 0.163825
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=165, socket_queue;dur=1.381, edge;dur=2.064
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=d73691be-d565-4a52-a6db-0f02a12c1532
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=d73691be-d565-4a52-a6db-0f02a12c1532
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=gKz6uILA6UCUQChtbUi1tnVbsCRKqpz2Ph7YpB7LoOtkmQpJ60pbE6yGwLfVwb2cyePKlDlThFDDnrshJ0rrLd%2BRTHWjkhmaKaOugyqCH0%2FZ9adn4XxfhsyTHDU1BwoKaRc%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 70884562392438fa-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

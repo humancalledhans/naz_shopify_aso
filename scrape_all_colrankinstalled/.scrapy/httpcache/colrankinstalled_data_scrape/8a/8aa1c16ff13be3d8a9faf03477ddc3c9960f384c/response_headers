@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 08:45:32 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/collections/shipping-spain>; rel="canonical"
+Etag: W/"80095dd15029708c2bd6cc4d1dc39e62"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=8b9bebe4-b497-46e6-b47c-37739eb81dc2; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:45:31 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=e644813d-2b1a-4f1e-8938-c3cab93a4b44; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:15:31 GMT; secure; SameSite=Lax
+Set-Cookie: _y=8b9bebe4-b497-46e6-b47c-37739eb81dc2; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:45:31 GMT; secure; SameSite=Lax
+Set-Cookie: _s=e644813d-2b1a-4f1e-8938-c3cab93a4b44; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:15:31 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=897b2b7becfd047dac2370f2eb3282a3; path=/; expires=Sat, 21 May 2022 19:14:38 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 313896a3-e30f-45c1-bd43-e4be9f429124
+X-Runtime: 0.311364
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=332, socket_queue;dur=1.454, edge;dur=2.073
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=313896a3-e30f-45c1-bd43-e4be9f429124
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=313896a3-e30f-45c1-bd43-e4be9f429124
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=TQkuP9FfjzqDENg%2BNfSVQFUfqPgNpfzBUhFTxySH3H%2Bpxd8hajuRGAAtTia5%2FGRnhIh%2Fkln9kcjS%2F1zHmLNd5usueGFzngwY62gyfCeFsAjTeMFRRbwex6j3J1KCKKlCCM4%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff4d8103c607558-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

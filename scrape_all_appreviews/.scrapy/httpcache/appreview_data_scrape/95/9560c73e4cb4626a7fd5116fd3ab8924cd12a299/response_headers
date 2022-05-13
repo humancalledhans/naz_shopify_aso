@@ -1,0 +1,32 @@
+Date: Mon, 09 May 2022 06:11:01 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/customer-meta-wishlist-compare-list-js-api-for-customer-metafields/reviews>; rel="canonical"
+Etag: W/"db48827e5813d1eb5f0a053f3488b921"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=49de5a99-431f-446e-82e3-cbf6b05c238e; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:11:00 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=7720f1e8-d632-4c90-97de-775bbbfd1545; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:41:00 GMT; secure; SameSite=Lax
+Set-Cookie: _y=49de5a99-431f-446e-82e3-cbf6b05c238e; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:11:00 GMT; secure; SameSite=Lax
+Set-Cookie: _s=7720f1e8-d632-4c90-97de-775bbbfd1545; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:41:00 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=b186aab7a84db4f17dc69afc09f64497; path=/; expires=Wed, 08 Jun 2022 16:40:07 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 814349b6-a27d-462d-8cec-c038b402c2f6
+X-Runtime: 0.314988
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=316, socket_queue;dur=2.375, edge;dur=0.069
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=814349b6-a27d-462d-8cec-c038b402c2f6
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=814349b6-a27d-462d-8cec-c038b402c2f6
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=mpp4Z6MJBmZ67xS%2BpAyaRmGY7K%2BQ2cLiJArfBOyyRaTwfxXhp0fGrCnBLFM%2BiE2OUTG7AjZDtbjtnWZb9RKyQvvzOwlF%2BPvL5eom85rCq4SigzQkEjmc32mMSnYOL1TODR0%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 70884678887438fa-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

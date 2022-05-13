@@ -1,0 +1,30 @@
+Date: Mon, 09 May 2022 06:09:26 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/yurtici-kargo-entegrasyonu>; rel="canonical"
+Cache-Control: no-cache
+Set-Cookie: _shopify_y=76dc4493-2bb2-4443-90c5-ee23087308f3; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:09:26 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=6f51721e-d9b3-4173-842c-d8f3dc6e1368; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:39:26 GMT; secure; SameSite=Lax
+Set-Cookie: _y=76dc4493-2bb2-4443-90c5-ee23087308f3; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:09:26 GMT; secure; SameSite=Lax
+Set-Cookie: _s=6f51721e-d9b3-4173-842c-d8f3dc6e1368; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:39:26 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=b8c168dd2451d19ecfa884ca0e138a78; path=/; expires=Wed, 08 Jun 2022 16:38:32 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 720b97d7-b1dc-4b62-85ed-322eda4df237
+X-Runtime: 0.083425
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=101, socket_queue;dur=1.851, edge;dur=2.061
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=720b97d7-b1dc-4b62-85ed-322eda4df237
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=720b97d7-b1dc-4b62-85ed-322eda4df237
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=c4oAhIEMn0qYUuxL7WgFZTWTMtSHVmDLK7KW8zOO9pfji9n1ek%2FoB0HaqGqLPI%2FC13%2Bu4%2B7XREXriK%2BwaZzBxIh6y%2Bd0nwClyVn1QQJm5%2FDxRVaGkk5Y9AHHaVNJE8vD7LE%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 7088442989303907-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

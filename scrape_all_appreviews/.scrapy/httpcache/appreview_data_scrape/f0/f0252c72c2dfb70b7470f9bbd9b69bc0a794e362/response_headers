@@ -1,0 +1,32 @@
+Date: Tue, 10 May 2022 17:02:59 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/whatsapp-abandoned-cart-recovery>; rel="canonical"
+Etag: W/"9c7b6041503a09116f6f759e126791c0"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=f92051ed-c556-4be9-96b6-c535cff5d594; domain=shopify.com; path=/; expires=Wed, 10 May 2023 17:02:59 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=392ce62e-ea3d-4238-b455-3706db8b697f; domain=shopify.com; path=/; expires=Tue, 10 May 2022 17:32:59 GMT; secure; SameSite=Lax
+Set-Cookie: _y=f92051ed-c556-4be9-96b6-c535cff5d594; domain=shopify.com; path=/; expires=Wed, 10 May 2023 17:02:59 GMT; secure; SameSite=Lax
+Set-Cookie: _s=392ce62e-ea3d-4238-b455-3706db8b697f; domain=shopify.com; path=/; expires=Tue, 10 May 2022 17:32:59 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=5af308c83527e93d2e99b2bb1fa324d0; path=/; expires=Fri, 10 Jun 2022 03:32:05 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 11ceefe7-4920-47c8-b2e4-0474c8a91d29
+X-Runtime: 0.414314
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=415, socket_queue;dur=2.308, edge;dur=3.057
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=11ceefe7-4920-47c8-b2e4-0474c8a91d29
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=11ceefe7-4920-47c8-b2e4-0474c8a91d29
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Iist2jINJOyI3EY5BEwh%2FULge0SMls9lK2IZ6NkiCdGDxlkko0jPPgF9BUDaZ09%2FjWHEH%2FGn%2Bfpzr4HA0eYFJjnAQVT%2BLrMPVkXcI6Z99CZH%2F6kq8b34z4YvCnJfeaVcgMA%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 70943ee42ef8289f-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

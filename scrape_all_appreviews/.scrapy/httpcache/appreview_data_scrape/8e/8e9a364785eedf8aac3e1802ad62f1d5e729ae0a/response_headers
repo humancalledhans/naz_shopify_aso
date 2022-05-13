@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 12:02:09 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/walmart-marketplace/reviews>; rel="canonical"
+Etag: W/"d11a9c23c450a9eef07347e7c8c83c45"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=d6aab810-5353-49a6-89d3-2e4ac9668c7d; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 12:02:09 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=5ceddf11-f437-4feb-890c-dce5a6ef5389; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 12:32:09 GMT; secure; SameSite=Lax
+Set-Cookie: _y=d6aab810-5353-49a6-89d3-2e4ac9668c7d; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 12:02:09 GMT; secure; SameSite=Lax
+Set-Cookie: _s=5ceddf11-f437-4feb-890c-dce5a6ef5389; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 12:32:09 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=35d03fa5691c9127704622d632d2cec5; path=/; expires=Sat, 21 May 2022 22:31:15 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 18d4df08-575d-4440-b463-3f0377c3f3b2
+X-Runtime: 0.246963
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=254, socket_queue;dur=1.713, edge;dur=1.061
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=18d4df08-575d-4440-b463-3f0377c3f3b2
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=18d4df08-575d-4440-b463-3f0377c3f3b2
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=NJVM2p5fWsLIX13Bd%2FZP6l26mw2AAPO4igzyKBYgRZB7Ejpk7gGk78xc2NNSh%2FThi3rTQ9IWzrQHYCgxAGFjAMNfEqMjti6bvwbRqdPT%2B1Tc2tjFZLmscHP9TVgajjvwnzg%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff5f815aa90390f-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

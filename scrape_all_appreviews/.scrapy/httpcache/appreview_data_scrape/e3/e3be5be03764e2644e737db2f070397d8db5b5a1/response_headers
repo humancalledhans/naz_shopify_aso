@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 05:11:19 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/revi-store-product-reviews/reviews>; rel="canonical"
+Etag: W/"12ea09a8138e51bc6d21b9c48b5b1f24"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=0f868e7a-17d5-4383-b956-c8a63cf5daf2; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:11:18 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=8d6e0bbe-4f56-4fd5-9318-63102bb992f6; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 05:41:18 GMT; secure; SameSite=Lax
+Set-Cookie: _y=0f868e7a-17d5-4383-b956-c8a63cf5daf2; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:11:18 GMT; secure; SameSite=Lax
+Set-Cookie: _s=8d6e0bbe-4f56-4fd5-9318-63102bb992f6; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 05:41:18 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=fb6573b08c40af08fa9ad18267f3c546; path=/; expires=Sat, 21 May 2022 15:40:24 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 52a454d2-64b1-47c0-8bab-932e371f90bf
+X-Runtime: 0.381136
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=395, socket_queue;dur=8.295, edge;dur=2.081
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=52a454d2-64b1-47c0-8bab-932e371f90bf
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=52a454d2-64b1-47c0-8bab-932e371f90bf
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ankyj2Flqw1iQsmtJ1Qd6WewYnLIy%2B7OAMld70yt%2BLrWu%2FC%2FAFiTEsuM0fNbJBgmRUG5aaVl6NPuLrTgH1QMuzn5OGXzMMHl4iiYA%2FvgCWO2zRDjknCNVvVE76VDFwYCXT0%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff39e439896389c-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

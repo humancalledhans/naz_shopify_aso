@@ -1,0 +1,32 @@
+Date: Fri, 13 May 2022 10:03:17 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/styria-shirts>; rel="canonical"
+Etag: W/"fc442f8dc50bd5c60cdabdc7706c0573"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=df8ff0c8-9acb-4915-b44e-8f6768157acb; domain=shopify.com; path=/; expires=Sat, 13 May 2023 10:03:16 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=b9b3c5e0-0c02-43f6-93ef-c7fc0d271d81; domain=shopify.com; path=/; expires=Fri, 13 May 2022 10:33:16 GMT; secure; SameSite=Lax
+Set-Cookie: _y=df8ff0c8-9acb-4915-b44e-8f6768157acb; domain=shopify.com; path=/; expires=Sat, 13 May 2023 10:03:16 GMT; secure; SameSite=Lax
+Set-Cookie: _s=b9b3c5e0-0c02-43f6-93ef-c7fc0d271d81; domain=shopify.com; path=/; expires=Fri, 13 May 2022 10:33:16 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=b10d616d7ab8e3eb1942621840e9e258; path=/; expires=Sun, 12 Jun 2022 20:32:22 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 07cd3ee5-9054-4c72-9776-2772bbed2134
+X-Runtime: 0.444814
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=452, socket_queue;dur=1.512, edge;dur=2.061
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=07cd3ee5-9054-4c72-9776-2772bbed2134
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=07cd3ee5-9054-4c72-9776-2772bbed2134
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=OfdAERshhJPSzdb%2B4WsvNhegbgAXRvlf6o%2ByHDda%2BLcR1R4s4eVmeFyWYZ1BaCEsjH1f2xlEFw3qXeSvjcEQWyNq8609ywW7Jtf98j3nYJb0KPJGWpZwRitabbN0m%2FG0YwM%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 70aa90325f75396f-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

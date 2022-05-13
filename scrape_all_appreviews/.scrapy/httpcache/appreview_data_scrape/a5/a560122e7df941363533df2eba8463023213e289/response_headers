@@ -1,0 +1,32 @@
+Date: Mon, 09 May 2022 06:09:58 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/easy-gift-cards>; rel="canonical"
+Etag: W/"8e70960cbbfe0cd7452873046a6efb2c"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=08b675c1-0284-4c5b-b457-0c87450e2db6; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:09:57 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=2b295e3a-be99-4013-ba75-3170f9409357; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:39:57 GMT; secure; SameSite=Lax
+Set-Cookie: _y=08b675c1-0284-4c5b-b457-0c87450e2db6; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:09:57 GMT; secure; SameSite=Lax
+Set-Cookie: _s=2b295e3a-be99-4013-ba75-3170f9409357; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:39:57 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=d6a876f4312ca2752f7c8770df79c36a; path=/; expires=Wed, 08 Jun 2022 16:39:03 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: b82d97f4-ec13-4a0b-b307-acd52c32d535
+X-Runtime: 0.352487
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=365, socket_queue;dur=1.48, edge;dur=8.067
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=b82d97f4-ec13-4a0b-b307-acd52c32d535
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=b82d97f4-ec13-4a0b-b307-acd52c32d535
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=oV4ONII%2FMLMpMC8m11x9FUeJY0IFDEu3yLtH2jkfzUA2pAwSsdwclPPsBDqG065T4%2BeneAfgFZS4N%2FZBkSZJjB%2F52XqrjoRMHt%2BmHDStl42bGziyoOwA6tM6Qf6CA7RdU0Q%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 708844ed3f263907-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

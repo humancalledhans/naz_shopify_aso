@@ -1,0 +1,30 @@
+Date: Mon, 09 May 2022 06:09:50 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/gst-4-indian-entrepreneur>; rel="canonical"
+Cache-Control: no-cache
+Set-Cookie: _shopify_y=fbebed94-4878-4941-8250-e9d168328f9b; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:09:50 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=d1633616-8224-419c-b6a6-86c0fba7e3d1; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:39:50 GMT; secure; SameSite=Lax
+Set-Cookie: _y=fbebed94-4878-4941-8250-e9d168328f9b; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:09:50 GMT; secure; SameSite=Lax
+Set-Cookie: _s=d1633616-8224-419c-b6a6-86c0fba7e3d1; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:39:50 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=b23dc71c6e8cff77b62bb035c5360bb3; path=/; expires=Wed, 08 Jun 2022 16:38:56 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 829948ba-ccf5-40af-9c4a-5d5bb3539b39
+X-Runtime: 0.197698
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=212, socket_queue;dur=1.275, edge;dur=1.089
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=829948ba-ccf5-40af-9c4a-5d5bb3539b39
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=829948ba-ccf5-40af-9c4a-5d5bb3539b39
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=nyJiRk7YkPmBOPD5Hfp8%2BGVAxzKqoVaqqG1u%2BkvAOVeY7lHZoS5v%2F6RcJOtG3ZkHR2HuJhk6fcLV%2BRiwWO3ANzoX9xiZhR%2Fn7hzWTsDpYfLxZyw24WRkLLRnlTt%2FXeFwZOY%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 708844bf7d054281-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

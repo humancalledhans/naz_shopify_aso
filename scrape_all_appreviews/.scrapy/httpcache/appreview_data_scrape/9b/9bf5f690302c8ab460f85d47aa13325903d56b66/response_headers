@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 05:01:34 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/ubartab-bar-tabs-and-cart-management/reviews>; rel="canonical"
+Etag: W/"5749195f5ce1450c617ea7aa20bde165"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=4a178ca6-dea8-46cf-8586-a5420bf8e9ad; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:01:33 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=e0a3dab1-1fd3-4740-90e9-f8b781a684b3; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 05:31:33 GMT; secure; SameSite=Lax
+Set-Cookie: _y=4a178ca6-dea8-46cf-8586-a5420bf8e9ad; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:01:33 GMT; secure; SameSite=Lax
+Set-Cookie: _s=e0a3dab1-1fd3-4740-90e9-f8b781a684b3; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 05:31:33 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=79181fbceb2d20e9095070f3870e310f; path=/; expires=Sat, 21 May 2022 15:30:40 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 46205bd3-bcea-40ce-885a-bd3179df1405
+X-Runtime: 0.398810
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=424, socket_queue;dur=1.447, edge;dur=1.054
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=46205bd3-bcea-40ce-885a-bd3179df1405
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=index&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Freviews&source%5Buuid%5D=46205bd3-bcea-40ce-885a-bd3179df1405
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=fprATpE%2B5AzWsoCW%2Fq99Rvurtgu1JgiM2ixcLzuGwaBVcFtPavt9ObUuwGMM%2BT9vCKdc%2BSbcNxBaA4MufvCba9jNK1Kb1%2BegUWzHmQOf9nmPEmbSf1LoVlQELjj9h6NQLsY%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff38ffc6fae4281-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

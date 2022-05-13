@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 08:48:47 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/collections/prevencion-fraude-mexico>; rel="canonical"
+Etag: W/"c20bfa2aa51a67114a6e6e1faf3c0387"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=93e726b4-7134-4956-9e0a-1cef41304457; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:48:47 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=3b849249-74bc-4929-bfa8-5e9774959a54; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:18:47 GMT; secure; SameSite=Lax
+Set-Cookie: _y=93e726b4-7134-4956-9e0a-1cef41304457; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:48:47 GMT; secure; SameSite=Lax
+Set-Cookie: _s=3b849249-74bc-4929-bfa8-5e9774959a54; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:18:47 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=87b2236500ec5ec28f47e6d50af66804; path=/; expires=Sat, 21 May 2022 19:17:53 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 3d3ffc0d-347b-418c-9766-681479887c6b
+X-Runtime: 0.272782
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=288, socket_queue;dur=2.055, edge;dur=2.061
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=3d3ffc0d-347b-418c-9766-681479887c6b
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=3d3ffc0d-347b-418c-9766-681479887c6b
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=%2FoTYRW25rR%2BnEO2W1LIpjw40u8as8DpXzOGQHKsAvbteOhciVEtkPdM%2FgW27nGXH9q2Q%2Fla9AL0lrDhCRYQB8wPWLHehu52KTQt%2FXMKgRCoLKkX3nlNzk5C0Ca%2BSlyqzGAY%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff4dcd6b8547558-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

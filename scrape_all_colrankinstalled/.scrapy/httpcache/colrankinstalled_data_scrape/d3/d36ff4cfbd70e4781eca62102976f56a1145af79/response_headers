@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 08:49:45 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/collections/dropshipping>; rel="canonical"
+Etag: W/"c7832c4f3cd6a9a5d38f012d4bacba62"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=0b6bf21a-2378-4457-a0e8-7f18fd4b90c4; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:49:44 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=3f7e237f-3738-4a9d-ade0-3d46a283c44d; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:19:44 GMT; secure; SameSite=Lax
+Set-Cookie: _y=0b6bf21a-2378-4457-a0e8-7f18fd4b90c4; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:49:44 GMT; secure; SameSite=Lax
+Set-Cookie: _s=3f7e237f-3738-4a9d-ade0-3d46a283c44d; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:19:44 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=a3d8f958869c255345595d302cadbea5; path=/; expires=Sat, 21 May 2022 19:18:50 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: fd06dd11-0232-467f-a8a5-bc247dd23ab3
+X-Runtime: 0.324950
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=342, socket_queue;dur=1.258, edge;dur=3.093
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=fd06dd11-0232-467f-a8a5-bc247dd23ab3
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=fd06dd11-0232-467f-a8a5-bc247dd23ab3
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Wv%2Fpn1Uz2Xw4piZI7DpM%2Bhq2ZKewrSwMx9ynsGISMtLWvdLKaPQRzDG01%2BPJLB4K8gLfowqCz7kOo3UCoZnzl7DF6Ow70ZsnZFO7l%2FIeOXDcW9EMATCeDhW1Mhy2qwaODAc%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff4de3ca9697558-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

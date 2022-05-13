@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 08:45:47 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/collections/mobile-optimized>; rel="canonical"
+Etag: W/"bf4ca059c225dc028229400ced229966"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=07d33835-e59f-4f32-89fa-060228cbc830; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:45:47 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=b8469271-2ee3-43ad-b84a-87c78fb8f882; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:15:47 GMT; secure; SameSite=Lax
+Set-Cookie: _y=07d33835-e59f-4f32-89fa-060228cbc830; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 08:45:47 GMT; secure; SameSite=Lax
+Set-Cookie: _s=b8469271-2ee3-43ad-b84a-87c78fb8f882; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 09:15:47 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=492dd9160a23a72522c2c5bf8072ca54; path=/; expires=Sat, 21 May 2022 19:14:53 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: a2141a67-b7f3-4d4b-9a47-ca34d16cf4be
+X-Runtime: 0.346148
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=359, socket_queue;dur=1.341, edge;dur=2.073
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=a2141a67-b7f3-4d4b-9a47-ca34d16cf4be
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fcollections&source%5Buuid%5D=a2141a67-b7f3-4d4b-9a47-ca34d16cf4be
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=6LOf504k7iKmP%2FUvXgqqEJAAyFugOJABLzXYfaNWRHTP7nzdE5lOawd3M1bnM8auri%2ForQmoUjQvoMPaMPx5Y2uquE9eCemSciApE60y6r5Jq3nbeCH9q%2FU%2BC%2BqqJzV216g%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff4d8706c797558-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

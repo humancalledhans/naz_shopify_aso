@@ -1,0 +1,32 @@
+Date: Thu, 21 Apr 2022 05:49:04 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/addthis-sharing-tool>; rel="canonical"
+Etag: W/"a7cad8283033cf5c778260ed0c22e914"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=c4c6e714-0e27-4993-824d-1148be5c33a3; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:49:03 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=540b38ab-75a9-48ae-a83e-cf53c605937d; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 06:19:03 GMT; secure; SameSite=Lax
+Set-Cookie: _y=c4c6e714-0e27-4993-824d-1148be5c33a3; domain=shopify.com; path=/; expires=Fri, 21 Apr 2023 05:49:03 GMT; secure; SameSite=Lax
+Set-Cookie: _s=540b38ab-75a9-48ae-a83e-cf53c605937d; domain=shopify.com; path=/; expires=Thu, 21 Apr 2022 06:19:03 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=d6ba240d872ba1ec9d472c465b902fa4; path=/; expires=Sat, 21 May 2022 16:18:10 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: cda1e5d5-ccbf-4dc0-8876-7ef653cb305d
+X-Runtime: 0.541887
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=543, socket_queue;dur=1.097, edge;dur=3.075
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=cda1e5d5-ccbf-4dc0-8876-7ef653cb305d
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=cda1e5d5-ccbf-4dc0-8876-7ef653cb305d
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=LwoglZoz%2BXhAAL2AATroEY9CJFLHq%2BbZfu8tdyqBstDSwkl7oieTG4OzP8i%2FY8SAVjROiFGuRj9j2zlyDRcFanRuYvhvn3aQck3don4MKMGlDKSciiacsy%2Be5WEZidBViLo%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 6ff3d5907af2289b-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

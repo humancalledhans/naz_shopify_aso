@@ -1,0 +1,30 @@
+Date: Mon, 09 May 2022 06:10:55 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/walmart-canada-marketplace-integration>; rel="canonical"
+Cache-Control: no-cache
+Set-Cookie: _shopify_y=d3bdc28a-83e9-4fca-8105-57b428d0431e; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:55 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=fceab0c4-70b7-46f7-960b-a9d526714028; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:55 GMT; secure; SameSite=Lax
+Set-Cookie: _y=d3bdc28a-83e9-4fca-8105-57b428d0431e; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:55 GMT; secure; SameSite=Lax
+Set-Cookie: _s=fceab0c4-70b7-46f7-960b-a9d526714028; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:55 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=4d1fab871ce1eebd37167dba6d3d7e5b; path=/; expires=Wed, 08 Jun 2022 16:40:01 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: b6d718d5-f541-4164-bb50-e474d05cd02a
+X-Runtime: 0.158436
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=172, socket_queue;dur=1.812, edge;dur=2.071
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=b6d718d5-f541-4164-bb50-e474d05cd02a
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=b6d718d5-f541-4164-bb50-e474d05cd02a
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=Rq20MJRo29Ld8j8Psl7bH8%2Bd%2BjUXgGIecVUOODb7MxzLnklXzHwUSX7CxJ%2BbDHb%2F8MztQKmwRkwgg54XluuvCTK0HNiLdVIkicSH9ssiyh67p3J4aloBNRrmtx%2FbYtvTxDc%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 708846572e883907-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

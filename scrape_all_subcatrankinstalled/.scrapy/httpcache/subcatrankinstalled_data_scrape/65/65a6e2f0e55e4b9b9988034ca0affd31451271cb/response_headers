@@ -1,0 +1,23 @@
+Date: Thu, 21 Apr 2022 08:25:38 GMT
+Content-Type: text/plain
+Last-Modified: Wed, 20 Apr 2022 22:26:53 GMT
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=1, socket_queue;dur=1.218, edge;dur=1.064
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'
+X-Request-Id: eb7a1d64-2c18-4625-bfc4-20f7b7e37d16
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=kOLn0Li%2FQVrW9XtACb0o95Nrwnx2kxg3Z5sgb5YlORGgDqiNvyJdyPJWkqCtg76K%2Bvflgh6jMKmqYaZJuaeFbnm9HtD6Ptk7mrmsKhXvgnTpehIPaLmQZPe5%2FViKdkogp0o%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 6ff4baeb5e97dd62-KUL
+Content-Encoding: gzip
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

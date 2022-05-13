@@ -1,0 +1,30 @@
+Date: Mon, 09 May 2022 06:10:28 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/ninja-van-shipping-delivery>; rel="canonical"
+Cache-Control: no-cache
+Set-Cookie: _shopify_y=a88ed1ff-50e7-4e31-a7ba-e79885573192; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:27 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=6ddf2e74-45de-4c68-93a8-248e5fbbdbf2; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:27 GMT; secure; SameSite=Lax
+Set-Cookie: _y=a88ed1ff-50e7-4e31-a7ba-e79885573192; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:27 GMT; secure; SameSite=Lax
+Set-Cookie: _s=6ddf2e74-45de-4c68-93a8-248e5fbbdbf2; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:27 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=2b750846b639f2190a65e03926603f1b; path=/; expires=Wed, 08 Jun 2022 16:39:33 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 70e194ab-7395-4bfd-8bb6-d65ec26da213
+X-Runtime: 0.235465
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=236, socket_queue;dur=1.946, edge;dur=2.07
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=70e194ab-7395-4bfd-8bb6-d65ec26da213
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=70e194ab-7395-4bfd-8bb6-d65ec26da213
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=VpSOweYM7y6dq%2B1CLpwjQo8lhOs4huYBzcXiOvOgmWb3%2B5lfZ92GJIWX1hF7dhaEV4V0Za8j1uPnAR68%2FKf09Wx1AZhsgEGWRbg%2FRS5G4NAG9Y%2BEF63CG1QWowvpn3KP%2FTQ%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 708845aa18b338fa-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

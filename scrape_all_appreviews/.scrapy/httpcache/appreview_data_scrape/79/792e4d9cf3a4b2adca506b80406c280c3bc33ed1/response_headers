@@ -1,0 +1,32 @@
+Date: Tue, 10 May 2022 15:22:13 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/easy-gift-wrapping>; rel="canonical"
+Etag: W/"a526c77ca2a00056c6a1f582b11532fc"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=bdcda394-b2e9-4f84-a62e-94e872906921; domain=shopify.com; path=/; expires=Wed, 10 May 2023 15:22:12 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=7797e414-4f98-4923-8a57-aa407bad3541; domain=shopify.com; path=/; expires=Tue, 10 May 2022 15:52:12 GMT; secure; SameSite=Lax
+Set-Cookie: _y=bdcda394-b2e9-4f84-a62e-94e872906921; domain=shopify.com; path=/; expires=Wed, 10 May 2023 15:22:12 GMT; secure; SameSite=Lax
+Set-Cookie: _s=7797e414-4f98-4923-8a57-aa407bad3541; domain=shopify.com; path=/; expires=Tue, 10 May 2022 15:52:12 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=3ff783b7e4097718500c0b463cb330cf; path=/; expires=Fri, 10 Jun 2022 01:51:19 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 6c2382bc-341e-4013-9596-6c4075c49869
+X-Runtime: 0.271220
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=278, socket_queue;dur=1.68, edge;dur=1.077
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=6c2382bc-341e-4013-9596-6c4075c49869
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=6c2382bc-341e-4013-9596-6c4075c49869
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=I6XDfJ6UpR36NxyJEumlbW3bEmHCfnJF7lmt21lcKoTsIgZ1lYJckR0WG1UvwlbcYCw%2FL0nYzHQITL073M9gE5BXtsJ1gG3DV8EkPIKoe4FA%2BIWKRHfsiHLoh%2F0bDGTizX0%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 7093ab461a297560-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

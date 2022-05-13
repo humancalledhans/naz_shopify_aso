@@ -1,0 +1,30 @@
+Date: Mon, 09 May 2022 06:10:43 GMT
+Content-Type: text/html; charset=utf-8
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/veeqo>; rel="canonical"
+Cache-Control: no-cache
+Set-Cookie: _shopify_y=8628fc53-16cf-47c1-8034-d72bcc38510b; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:42 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=f135a2f6-23f1-47d5-863b-2ddc1519f497; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:42 GMT; secure; SameSite=Lax
+Set-Cookie: _y=8628fc53-16cf-47c1-8034-d72bcc38510b; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:10:42 GMT; secure; SameSite=Lax
+Set-Cookie: _s=f135a2f6-23f1-47d5-863b-2ddc1519f497; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:40:42 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=2f69e3ed83defe0c335efdda04c7c8d9; path=/; expires=Wed, 08 Jun 2022 16:39:49 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 59db22c2-8126-4f0e-9293-2bd1f533f8dc
+X-Runtime: 0.155901
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=169, socket_queue;dur=1.843, edge;dur=2.074
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=59db22c2-8126-4f0e-9293-2bd1f533f8dc
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=59db22c2-8126-4f0e-9293-2bd1f533f8dc
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=yUAEIS5VwbezhMxmAgwKFVMa8azif%2BIoP5rXxjI6fWqG7i1JSuy95cTBGUaz9Vd6rkzp0DtuwMyoZsqr%2BLCwGh3Ue3xwUf%2BUQ%2FgQtYU%2BI6%2FvEwu9ENP6JR4lX8l7a%2BBntC0%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Vary: Accept-Encoding
+Server: cloudflare
+Cf-Ray: 70884608d8b038fa-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400

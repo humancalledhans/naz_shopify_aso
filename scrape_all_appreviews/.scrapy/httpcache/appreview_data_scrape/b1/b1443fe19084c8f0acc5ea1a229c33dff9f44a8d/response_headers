@@ -1,0 +1,32 @@
+Date: Mon, 09 May 2022 11:46:00 GMT
+Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
+Accept-Ch: Save-Data
+Link: <https://apps.shopify.com/check-your-bank-fraud-fighter>; rel="canonical"
+Etag: W/"103467641b46c92252dcfdca431ec134"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=1456b00e-469c-4e89-a558-a508806fc1c6; domain=shopify.com; path=/; expires=Tue, 09 May 2023 11:45:59 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=e9e15dc8-1e09-47ed-ab5e-2825b3486eef; domain=shopify.com; path=/; expires=Mon, 09 May 2022 12:15:59 GMT; secure; SameSite=Lax
+Set-Cookie: _y=1456b00e-469c-4e89-a558-a508806fc1c6; domain=shopify.com; path=/; expires=Tue, 09 May 2023 11:45:59 GMT; secure; SameSite=Lax
+Set-Cookie: _s=e9e15dc8-1e09-47ed-ab5e-2825b3486eef; domain=shopify.com; path=/; expires=Mon, 09 May 2022 12:15:59 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=a3dfa4ef244cdd828050747556d4bb9b; path=/; expires=Wed, 08 Jun 2022 22:15:05 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: c3459dfb-c9b8-4432-9709-8792199a1369
+X-Runtime: 0.289783
+Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
+Server-Timing: processing;dur=291, socket_queue;dur=1.36, edge;dur=3.061
+X-Frame-Options: DENY
+X-Content-Type-Options: nosniff
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=c3459dfb-c9b8-4432-9709-8792199a1369
+X-Download-Options: noopen
+X-Permitted-Cross-Domain-Policies: none
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=c3459dfb-c9b8-4432-9709-8792199a1369
+X-App-Name: appstore
+X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
+Cf-Cache-Status: BYPASS
+Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=M%2FEj6cUb9NHIb%2B3ZQGUIzfIT%2Fky2m6PyrNHxwz30Oq14AAKJqUdGbzmP9ielqQ9gg8gJEQIN7T6vYr1LpA%2F1Wi2w%2B0UgA3R2m%2B%2FYXf8mDSYR%2F6KnBuXgYGoY0aMEsJL1fxA%3D"}],"group":"cf-nel","max_age":604800}
+Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
+Server: cloudflare
+Cf-Ray: 708a312abef83963-KUL
+Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
