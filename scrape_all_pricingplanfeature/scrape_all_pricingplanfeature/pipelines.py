@@ -16,8 +16,8 @@ class ScrapeAllPricingplanfeaturePipeline:
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS pricing_plan_feature (
+            pricing_plan_id VARCHAR(255) NOT PRIMARY KEY,
             app_id VARCHAR(65535) NOT NULL,
-            pricing_plan_id VARCHAR(65535) NOT NULL,
             feature_description VARCHAR(65535) NOT NULL
         );"""
 
@@ -34,6 +34,17 @@ class ScrapeAllPricingplanfeaturePipeline:
         # print("LEN_OF_COLUMNS", len(columns))
         # print("LEN_OF_VALUES", len(values))
 
+        pricing_plan_id_index = columns.index('pricing_plan_id')
+        pricing_plan_id = values[pricing_plan_id_index]
+
+        app_id_index = columns.index('app_id')
+        app_id = values[app_id_index]
+
+        feature_description_index = columns.index('feature_description')
+        feature_description = values[feature_description_index]
+
+        values = (f"{app_id}, {pricing_plan_id}, {feature_description}")
+
         insert_stmt = """
             REPLACE INTO pricing_plan_feature ( app_id, pricing_plan_id, feature_description ) 
             VALUES ( %s, %s, %s )
@@ -46,40 +57,39 @@ class ScrapeAllPricingplanfeaturePipeline:
         cursor.close()
         cnx.close()  # closing the connection.
 
-class ReturnInCSV(object):
-    OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
 
-    def open_spider(self, spider):
-        self.write_file_headers()
+# class ReturnInCSV(object):
+#     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
 
-    def process_item(self, item, spider):
-        if isinstance(item, PricingPlanFeature):
-            self.store_pricing_plan_feature(item)
-            # return "PricingPlanFeature objects are now stored in CSV File."
-            return item
+#     def open_spider(self, spider):
+#         self.write_file_headers()
 
-        return item
+#     def process_item(self, item, spider):
+#         if isinstance(item, PricingPlanFeature):
+#             self.store_pricing_plan_feature(item)
+#             # return "PricingPlanFeature objects are now stored in CSV File."
+#             return item
 
-    def write_file_headers(self):
+#         return item
 
-        self.write_header("pricing_plan_features.csv",
-            ['app_id', 'pricing_plan_id', 'feature_description']
-            )
+#     def write_file_headers(self):
 
-        return
+#         self.write_header("pricing_plan_features.csv",
+#                           ['app_id', 'pricing_plan_id', 'feature_description']
+#                           )
 
+#         return
 
-    def store_pricing_plan_feature(self, pricing_plan_feature):
-        self.write_to_out('pricing_plan_features.csv', pricing_plan_feature)
-        return pricing_plan_feature
+#     def store_pricing_plan_feature(self, pricing_plan_feature):
+#         self.write_to_out('pricing_plan_features.csv', pricing_plan_feature)
+#         return pricing_plan_feature
 
+#     def write_to_out(self, file_name, row):
+#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
+#             csv_output = csv.writer(output)
+#             csv_output.writerow(dict(row).values())
 
-    def write_to_out(self, file_name, row):
-        with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-            csv_output = csv.writer(output)
-            csv_output.writerow(dict(row).values())
-
-    def write_header(self, file_name, row):
-        with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-            csv_output = csv.writer(output)
-            csv_output.writerow(row)
+#     def write_header(self, file_name, row):
+#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
+#             csv_output = csv.writer(output)
+#             csv_output.writerow(row)

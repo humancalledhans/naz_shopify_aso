@@ -4,7 +4,6 @@ from ..items import PricingPlan
 
 import scrapy
 import re
-import uuid
 import hashlib
 
 from scrapy import Request
@@ -29,14 +28,14 @@ class PricingplanDataScrapeSpider(scrapy.spiders.SitemapSpider):
         'DOWNLOAD_DELAY': 3,
     }
 
-
     def parse_app_page(self, response):
-        
+
         app_url = response.url
         app_id = hashlib.md5(app_url.lower().encode()).hexdigest()
 
         for pricing_plan in response.css('.ui-card.pricing-plan-card'):
-            pricing_plan_id = str(uuid.uuid4())
+            pricing_plan_id = hashlib.md5(
+                pricing_plan.upper().encode()).hexdigest()
             yield PricingPlan(pricing_plan_id=pricing_plan_id,
                               app_id=app_id,
                               pricing_plan_title=pricing_plan.css('.pricing-plan-card__title-kicker ::text').extract_first(

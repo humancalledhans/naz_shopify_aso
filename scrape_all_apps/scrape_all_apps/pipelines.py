@@ -16,7 +16,10 @@ class ScrapeAllAppsPipeline:
             # return "Apps are now stored in CSV File."
             return item
 
-    def add_app(self, cursor, cnx, app_data):
+    def upload_to_db(self, app_data):
+        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+        cursor = cnx.cursor()
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS app(
@@ -95,10 +98,10 @@ class ScrapeAllAppsPipeline:
         self.add_affinity_app_mediator(
             cursor=cursor, cnx=cnx, parent_app_id=app_id, affinity_apps_id_list=affinity_apps_id_list)
 
-        app_values = f"({app_id}, {app_logo}, {app_title}, {app_intro_vid_url}, \
+        app_values = (f"{app_id}, {app_logo}, {app_title}, {app_intro_vid_url}, \
                         {app_developer_link}, {app_illustration_image}, {app_brief_description}, \
                         {app_full_description}, {app_rating}, {app_num_of_reviews}, {app_pricing_hint}, \
-                        {app_url}, {app_published_date}, {scrape_date_time})"
+                        {app_url}, {app_published_date}, {scraped_date_time}")
         insert_stmt = """
             INSERT INTO app ( app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date )
             VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )
@@ -113,7 +116,7 @@ class ScrapeAllAppsPipeline:
 
         cnx.commit()
         cursor.close()
-        cnx.close()
+        cnx.close()  # closing the connection.
 
     def add_affinity_app_mediator(self, cursor, cnx, parent_app_id, affinity_apps_id_list):
 
@@ -124,7 +127,7 @@ class ScrapeAllAppsPipeline:
         );"""
 
         for affinity_app_id in affinity_apps_id_list:
-            values = f"({parent_app_id},{affinity_app_id})"
+            values = (f"{parent_app_id},{affinity_app_id}")
             insert_stmt = """
             REPLACE INTO affinity_apps_mediator ( parent_app_id, affinity_app_id ) VALUES ( %s, %s )
             """
@@ -132,16 +135,6 @@ class ScrapeAllAppsPipeline:
             cursor.execute(create_table_statement)
             cursor.execute(insert_stmt, values)
             cnx.commit()
-
-    def upload_to_db(self, app_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
-        cursor = cnx.cursor()
-
-        self.add_app(cursor=cursor, cnx=cnx, app_data=app_data)
-
-        cursor.close()
-        cnx.close()  # closing the connection.
 
 
 # class ReturnInCSV(object):

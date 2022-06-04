@@ -1,18 +1,18 @@
 import csv
+import mysql.connector
 from .items import Developer
 
 
 class ScrapeAllDevelopersPipeline:
-   def process_item(self, item, spider):
+    def process_item(self, item, spider):
         if isinstance(item, Developer):
             self.upload_to_db(item)
             # return "Apps are now stored in CSV File."
             return item
 
-
     def upload_to_db(self, developer_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022', 
-            host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -26,9 +26,10 @@ class ScrapeAllDevelopersPipeline:
             dev_website VARCHAR(25535)
         );"""
 
-
-        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_') for x in developer_data.keys())
-        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_') for x in developer.values())
+        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                        for x in developer_data.keys())
+        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                       for x in developer_data.values())
 
         columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
         values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
@@ -57,17 +58,20 @@ class ScrapeAllDevelopersPipeline:
         dev_experience = values[dev_experience_index]
 
         dev_website_index = columns.index('dev_website')
-        dev_website = values[dev_website]
+        dev_website = values[dev_website_index]
 
         developed_apps_index = columns.index('developed_apps')
-        developed_apps = values[developed_apps_index]
+        developed_apps_list = values[developed_apps_index]
+
+        self.add_developed_apps_mediator(
+            cursor=cursor, cnx=cnx, dev_id=dev_id, developed_apps_list=developed_apps_list)
 
         values = (f"{dev_id}, {dev_support_email}, {dev_support_number}, \
             {dev_average_rating}, {dev_partners_href}, {dev_experience}, \
-            {dev_website}") ###TODO: DEVELOPED_APPS WONT WORK!
+            {dev_website}")  # TODO: DEVELOPED_APPS WONT WORK!
 
         insert_stmt = """
-            INSERT INTO col_rank_relevance_data ( collection_id, ranking, app_id ) VALUES ( %s, %s, %s )
+            INSERT INTO developer ( dev_id, dev_support_email, dev_support_number, dev_average_rating, dev_partners_href, dev_experience, dev_website ) VALUES ( %s, %s, %s, %s, %s, %s, %s )
             """
 
         cursor.execute(create_table_statement)
@@ -75,7 +79,27 @@ class ScrapeAllDevelopersPipeline:
 
         cnx.commit()
         cursor.close()
-        cnx.close() # closing the connection.
+        cnx.close()  # closing the connection.
+
+    def add_developed_apps_mediator(self, cursor, cnx, dev_id, developed_apps_list):
+
+        create_table_statement = """
+        CREATE TABLE IF NOT EXISTS developed_apps_mediator(
+            dev_id VARCHAR(65535) NOT NULL,
+            developed_app VARCHAR(65535) NOT NULL
+        )
+        """
+
+        for developed_app in developed_apps_list:
+            values = (f"{dev_id}, {developed_app}")
+            insert_stmt = """
+            REPLACE INTO developed_apps_mediator ( dev_id, developed_app ) VALUES ( %s, %s )
+            """
+
+            cursor.execute(create_table_statement)
+            cursor.execute(insert_stmt, values)
+            cnx.commit()
+
 
 # class ReturnInCSV(object):
 #     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
@@ -94,7 +118,7 @@ class ScrapeAllDevelopersPipeline:
 #         return item
 
 #     def write_file_headers(self):
- 
+
 #         self.write_header("developer.csv",
 #             ['developer_id', 'support_email', 'support_number', 'average_rating', 'shopify_link', 'experience', 'website', 'developed_apps']
 #             )

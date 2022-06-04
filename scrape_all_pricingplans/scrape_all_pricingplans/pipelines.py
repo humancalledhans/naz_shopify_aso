@@ -9,10 +9,10 @@ class ScrapeAllPricingplansPipeline:
             self.upload_to_db(item)
             # return "Apps are now stored in CSV File."
             return item
-            
+
     def upload_to_db(self, pricingplan_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                        host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -26,7 +26,7 @@ class ScrapeAllPricingplansPipeline:
         columns = 'AaT3C~*~GA@PQT'.join(str(x)
                                         for x in pricingplan_data.keys())
         values = 'AaT7C~*~GA@PQT'.join(str(x)
-                                       for x in pricingplan_data.values())
+                                        for x in pricingplan_data.values())
 
         columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
         values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
@@ -35,6 +35,20 @@ class ScrapeAllPricingplansPipeline:
 
         # print("LEN_OF_COLUMNS", len(columns))
         # print("LEN_OF_VALUES", len(values))
+
+        pricing_plan_id_index = columns.index('pricing_plan_id')
+        pricing_plan_id = values[pricing_plan_id_index]
+
+        app_id_index = columns.index('app_id')
+        app_id = values[app_id_index]
+
+        pricing_plan_title_index = columns.index('pricing_plan_title')
+        pricing_plan_title = values[pricing_plan_title_index]
+
+        price_index = columns.index('price')
+        price = values[price_index]
+
+        values = (f"{pricing_plan_id}, {app_id}, {pricing_plan_title}, {price}")
 
         insert_stmt = """
             REPLACE INTO pricing_plan ( pricing_plan_id, app_id, pricing_plan_title, price ) 
@@ -64,19 +78,16 @@ class ScrapeAllPricingplansPipeline:
 
 #         return item
 
-
     # def write_file_headers(self):
     #     self.write_header("pricing_plans.csv",
     #         ['pricing_plan_id', 'app_id', 'pricing_plan_title', 'price']
     #         )
-        
-    #     return
 
+    #     return
 
     # def store_pricing_plan(self, pricing_plan):
     #     self.write_to_out('pricing_plans.csv', pricing_plan)
     #     return pricing_plan
-
 
     # def write_to_out(self, file_name, row):
     #     with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
