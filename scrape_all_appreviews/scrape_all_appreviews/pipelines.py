@@ -28,12 +28,12 @@ class ScrapeAllAppreviewsPipeline:
             app_review_id INT PRIMARY KEY AUTO_INCREMENT,
             app_id VARCHAR(65535) NOT NULL,
             author VARCHAR(65535) NOT NULL,
-            rating VARCHAR(65535),
+            rating DECIMAL(2,2),
             posted_at VARCHAR(65535),
             body VARCHAR(65535) NOT NULL,
             helpful_count VARCHAR(65535),
             developer_reply VARCHAR(65535),
-            developer_reply_date VARCHAR(65535)
+            developer_reply_date DATE
                 
         );"""
 

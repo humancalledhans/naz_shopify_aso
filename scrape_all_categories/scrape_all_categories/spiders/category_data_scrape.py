@@ -2,6 +2,8 @@
 
 from ..items import Category
 
+from datetime import date
+
 import random
 import scrapy
 import re
@@ -70,5 +72,7 @@ class CategoryDataScrapeSpider(scrapy.spiders.SitemapSpider):
 
         category_name = response.xpath("//h1//text()").get().strip()
         category_id = hashlib.md5(category_name.lower().encode()).hexdigest()
+
+        scraped_date = date.today()
 
         yield Category(category_id=category_id, category_title=category_name, category_description=category_description)

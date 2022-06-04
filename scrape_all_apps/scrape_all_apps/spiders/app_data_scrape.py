@@ -126,5 +126,6 @@ class AppDataScrapeSpider(scrapy.spiders.SitemapSpider):
             app_published_date = date_published,
             app_integrated_apps = integrations_list, # performed ".replace("'", "\\'")" for all elements in list.
             affinity_apps_id_list = affinity_apps_id_list,
-            app_category_id_list = categories_list
+            app_category_id_list = categories_list,
+            
             )

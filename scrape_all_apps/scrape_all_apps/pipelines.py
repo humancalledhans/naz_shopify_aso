@@ -32,7 +32,9 @@ class ScrapeAllAppsPipeline:
             app_num_of_reviews VARCHAR(65535),
             app_pricing_hint VARCHAR(65535),
             app_url VARCHAR(65535),
-            app_published_date VARCHAR(65535)
+            app_published_date DATE NOT NULL,
+            scraped_date_time DATE NOT NULL,
+
         );"""
 
         columns = 'AaT3C~*~GA@PQT'.join(str(x)
@@ -86,14 +88,20 @@ class ScrapeAllAppsPipeline:
         app_published_date = datetime.strptime(date_string, "%B %d, %Y")
 
         affinity_apps_list_index = columns.index('affinity_apps_id_list')
-        affinity_apps_id_list = columns[affinity_apps_list_index]
+        affinity_apps_id_list = values[affinity_apps_list_index]
+
+        scraped_date_time = datetime.now()
 
         self.add_affinity_app_mediator(
             cursor=cursor, cnx=cnx, parent_app_id=app_id, affinity_apps_id_list=affinity_apps_id_list)
 
-        insert_stmt = f"""
-            REPLACE INTO app ( app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date )
-            VALUES ('{app_id}', '{app_logo}', '{app_title}', '{app_intro_vid_url}', '{app_developer_link}', '{app_illustration_image}', '{app_brief_description}', '{app_full_description}', '{app_rating}', '{app_num_of_reviews}', '{app_pricing_hint}', '{app_url}', '{app_published_date}')
+        app_values = f"({app_id}, {app_logo}, {app_title}, {app_intro_vid_url}, \
+                        {app_developer_link}, {app_illustration_image}, {app_brief_description}, \
+                        {app_full_description}, {app_rating}, {app_num_of_reviews}, {app_pricing_hint}, \
+                        {app_url}, {app_published_date}, {scrape_date_time})"
+        insert_stmt = """
+            INSERT INTO app ( app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date )
+            VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )
             """
 
         # print("LEN_OF_COLUMNS", len(columns))
@@ -101,15 +109,16 @@ class ScrapeAllAppsPipeline:
 
         # print("INSERT_STMTT: ", insert_stmt)
         cursor.execute(create_table_statement)
-        cursor.execute(insert_stmt)
+        cursor.execute(insert_stmt, app_values)
 
-        # cnx.commit()
+        cnx.commit()
+        cursor.close()
+        cnx.close()
 
     def add_affinity_app_mediator(self, cursor, cnx, parent_app_id, affinity_apps_id_list):
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS affinity_apps_mediator(
-            affinity_apps_mediator_id VARCHAR(65535) PRIMARY KEY,
             parent_app_id VARCHAR(65535) NOT NULL,
             affinity_app_id VARCHAR(65535) NOT NULL
         );"""
@@ -120,9 +129,9 @@ class ScrapeAllAppsPipeline:
             REPLACE INTO affinity_apps_mediator ( parent_app_id, affinity_app_id ) VALUES ( %s, %s )
             """
 
-            # cursor.execute(create_table_statement)
-            # cursor.execute(insert_stmt, values)
-            # cnx.commit()
+            cursor.execute(create_table_statement)
+            cursor.execute(insert_stmt, values)
+            cnx.commit()
 
     def upload_to_db(self, app_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
@@ -130,8 +139,6 @@ class ScrapeAllAppsPipeline:
         cursor = cnx.cursor()
 
         self.add_app(cursor=cursor, cnx=cnx, app_data=app_data)
-
-        # add_app
 
         cursor.close()
         cnx.close()  # closing the connection.

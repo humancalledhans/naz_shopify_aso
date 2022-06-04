@@ -86,7 +86,8 @@ def scrape_collection_rankings(collection_page_url, id, end_link_to_append, sort
 
     if len(app_id_ranking_list) > 0:
             if "&sort_by=relevance" in driver.current_url:
-                return CollectionRankingRelevance(collection_id=id, app_id_list=app_id_ranking_list)
+                for app_id in app_id_ranking_list:
+                    return CollectionRankingRelevance(collection_id=id, ranking=app_id[0], app_id=app_id[1])
 
 
 class ColrankrelevanceDataScrapeSpider(scrapy.spiders.SitemapSpider):

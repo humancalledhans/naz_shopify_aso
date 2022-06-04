@@ -79,7 +79,8 @@ def scrape_category_rankings(browse_page_url, id, is_category, end_link_to_appen
     if len(app_id_ranking_list) > 0:
         if is_category:
             if "&sort_by=newest" in driver.current_url:
-                return CategoryRankingNewest(category_id=id, app_id_list=app_id_ranking_list)
+                for app_id in app_id_ranking_list:
+                    return CategoryRankingNewest(category_id=id, ranking=app_id[0], app_id=app_id[1])
 
 
 class CatranknewestDataScrapeSpider(scrapy.spiders.SitemapSpider):

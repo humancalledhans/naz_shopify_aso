@@ -86,7 +86,8 @@ def scrape_collection_rankings(collection_page_url, id, end_link_to_append, sort
 
     if len(app_id_ranking_list) > 0:
             if "&sort_by=installed" in driver.current_url:
-                return CollectionRankingInstalled(collection_id=id, app_id_list=app_id_ranking_list)
+                for app_id in app_id_ranking_list:
+                    return CollectionRankingInstalled(collection_id=id, ranking=app_id[0], app_id=app_id[1])
 
 
 class ColrankinstalledDataScrapeSpider(scrapy.spiders.SitemapSpider):
