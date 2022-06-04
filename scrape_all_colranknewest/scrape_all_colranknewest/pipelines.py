@@ -1,18 +1,19 @@
 import csv
+import mysql.connector
 from .items import CollectionRankingNewest
+from datetime import datetime
 
 
 class ScrapeAllColranknewestPipeline:
-   def process_item(self, item, spider):
+    def process_item(self, item, spider):
         if isinstance(item, CollectionRankingNewest):
             self.upload_to_db(item)
             # return "Apps are now stored in CSV File."
             return item
 
-
     def upload_to_db(self, col_rank_newest_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022', 
-            host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -20,12 +21,13 @@ class ScrapeAllColranknewestPipeline:
             col_id VARCHAR(25535) NOT NULL,
             rank INT NOT NULL,
             app_id VARCHAR(25535) NOT NULL,
-            date_time_scraped DATE
+            date_time_scraped DATE NOT NULL
         );"""
 
-
-        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_') for x in col_rank_newest_data.keys())
-        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_') for x in col_rank_newest_data.values())
+        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                        for x in col_rank_newest_data.keys())
+        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                       for x in col_rank_newest_data.values())
 
         columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
         values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
@@ -57,7 +59,7 @@ class ScrapeAllColranknewestPipeline:
 
         cnx.commit()
         cursor.close()
-        cnx.close() # closing the connection.
+        cnx.close()  # closing the connection.
 
 # class ReturnInCSV(object):
 #     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
@@ -66,7 +68,7 @@ class ScrapeAllColranknewestPipeline:
 #         self.write_file_headers()
 
 #     def process_item(self, item, spider):
- 
+
 #         if isinstance(item, CollectionRankingNewest):
 #             self.store_collectionrankingnewest(item)
 #             return item
