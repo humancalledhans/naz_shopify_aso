@@ -1,30 +1,32 @@
-Date: Mon, 09 May 2022 06:08:57 GMT
+Date: Wed, 08 Jun 2022 11:43:29 GMT
 Content-Type: text/html; charset=utf-8
+Vary: Accept-Encoding
 Accept-Ch: Save-Data
 Link: <https://apps.shopify.com/honest-view>; rel="canonical"
-Cache-Control: no-cache
-Set-Cookie: _shopify_y=2333c91a-65d7-4ad8-b2b8-8016a05e478e; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:08:56 GMT; secure; SameSite=Lax
-Set-Cookie: _shopify_s=21904ed5-7859-45aa-b7cb-0d5ccdb86ea8; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:38:56 GMT; secure; SameSite=Lax
-Set-Cookie: _y=2333c91a-65d7-4ad8-b2b8-8016a05e478e; domain=shopify.com; path=/; expires=Tue, 09 May 2023 06:08:56 GMT; secure; SameSite=Lax
-Set-Cookie: _s=21904ed5-7859-45aa-b7cb-0d5ccdb86ea8; domain=shopify.com; path=/; expires=Mon, 09 May 2022 06:38:56 GMT; secure; SameSite=Lax
-Set-Cookie: _shopify-app_store_session5=996d08abdfaaa63d5296bcf02b2d7233; path=/; expires=Wed, 08 Jun 2022 16:38:02 GMT; secure; HttpOnly; SameSite=Lax
-X-Request-Id: 45bed08b-8d35-4bb2-b271-6892661fcb0b
-X-Runtime: 0.143923
+Etag: W/"bbdb4d5134b705590fb5b4546f79233b"
+Cache-Control: max-age=0, private, must-revalidate
+Set-Cookie: _shopify_y=3ebc294a-7842-421b-b131-80d01f647e23; domain=shopify.com; path=/; expires=Thu, 08 Jun 2023 11:43:28 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify_s=066fed07-2043-4a4a-b304-1b73403be4d3; domain=shopify.com; path=/; expires=Wed, 08 Jun 2022 12:13:28 GMT; secure; SameSite=Lax
+Set-Cookie: _y=3ebc294a-7842-421b-b131-80d01f647e23; domain=shopify.com; path=/; expires=Thu, 08 Jun 2023 11:43:28 GMT; secure; SameSite=Lax
+Set-Cookie: _s=066fed07-2043-4a4a-b304-1b73403be4d3; domain=shopify.com; path=/; expires=Wed, 08 Jun 2022 12:13:28 GMT; secure; SameSite=Lax
+Set-Cookie: _shopify-app_store_session5=2b32ca1364cfda0828707baa2c87d553; path=/; expires=Fri, 08 Jul 2022 22:12:35 GMT; secure; HttpOnly; SameSite=Lax
+X-Request-Id: 6b507940-2a2a-4e20-9771-4605d2ec827b
+X-Runtime: 0.670203
 Strict-Transport-Security: max-age=15552000; includeSubDomains; preload
-Server-Timing: processing;dur=160, socket_queue;dur=1.49, edge;dur=2.055
+Server-Timing: processing;dur=688, socket_queue;dur=1.126, edge;dur=1.059
 X-Frame-Options: DENY
 X-Content-Type-Options: nosniff
-X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=45bed08b-8d35-4bb2-b271-6892661fcb0b
+X-Xss-Protection: 1; mode=block; report=/xss-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=6b507940-2a2a-4e20-9771-4605d2ec827b
 X-Download-Options: noopen
 X-Permitted-Cross-Domain-Policies: none
-Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=45bed08b-8d35-4bb2-b271-6892661fcb0b
+Content-Security-Policy-Report-Only: default-src 'self' https:; child-src 'self' https: data:; connect-src 'self' https: wss:; font-src 'self' https: data:; img-src 'self' https: data:; media-src 'self' https: data:; object-src 'self' https:; script-src 'self' https: 'unsafe-inline' 'unsafe-eval'; style-src 'self' https: 'unsafe-inline'; report-uri /csp-report?source%5Baction%5D=show&source%5Bapp%5D=ShopifyAppStore&source%5Bcontroller%5D=v2%2Fapp_listings&source%5Buuid%5D=6b507940-2a2a-4e20-9771-4605d2ec827b
 X-App-Name: appstore
 X-Dc: gcp-us-central1,us-east1,gke
+Content-Encoding: gzip
 Cf-Cache-Status: BYPASS
 Expect-Ct: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
-Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=j0P65smq2uFKT6ec6XrMXkEJZVScmVjX%2BeO9k6c%2FOlj99MRluK6FgFHmLkPKYN611ZP%2BWtmv0AHDjaceLlIRto1kw6jHvEtlxlEw9yYpKFiIsV4toUXf0K%2F5YfUwK7S1K6M%3D"}],"group":"cf-nel","max_age":604800}
+Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=pxQzgvp4BtYlEI8fR0%2FIFJDgek%2BKH9C2otf1LGZQd0D6Du90dvJt3GoZPxgzF%2FqKm1D%2FdnvCMXQurIqhDfmb5qSuJmG9HQRKkQraNkN88Kru155GWzLihXzLuUD%2F8BI%2FIB8%3D"}],"group":"cf-nel","max_age":604800}
 Nel: {"success_fraction":0.01,"report_to":"cf-nel","max_age":604800}
-Vary: Accept-Encoding
 Server: cloudflare
-Cf-Ray: 708843715d9b391b-KUL
+Cf-Ray: 71815eba98c3755c-KUL
 Alt-Svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
