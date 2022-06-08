@@ -14,7 +14,7 @@ class PricingplanfeatureDataScrapeSpider(scrapy.spiders.SitemapSpider):
 
     BASE_DOMAIN = "apps.shopify.com"
 
-    name = 'pricingplanfeature_data_scrape'
+    name = 'scrape_all_pricingplanfeature'
 
     allowed_domains = ['apps.shopify.com']
     sitemap_urls = ['https://apps.shopify.com/sitemap.xml']

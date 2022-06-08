@@ -1,5 +1,6 @@
 import scrapy
 
+
 class App(scrapy.Item):
     app_id = scrapy.Field()
     app_logo = scrapy.Field()
@@ -15,6 +16,8 @@ class App(scrapy.Item):
     app_url = scrapy.Field()
     app_published_date = scrapy.Field()
     app_integrated_apps = scrapy.Field()
-    app_category_id_list = scrapy.Field()
-    affinity_apps_id_list = scrapy.Field()
-    
+
+
+class AffinityAppMediator(scrapy.Item):
+    app_id = scrapy.Field()
+    affinity_app_id = scrapy.Field()

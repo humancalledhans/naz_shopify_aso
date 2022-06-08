@@ -17,7 +17,7 @@ def is_in_aws():
     return os.getenv('AWS_EXECUTION_ENV') is not None
 
 
-def crawl(settings={}, spider_name="appreview_data_scrape", spider_kwargs={}):
+def crawl(settings={}, spider_name="scrape_all_appreviews", spider_kwargs={}):
     project_settings = get_project_settings()
     spider_loader = SpiderLoader(project_settings)
 
@@ -34,7 +34,7 @@ def crawl(settings={}, spider_name="appreview_data_scrape", spider_kwargs={}):
 
     if is_in_aws():
         # Lambda can only write to the /tmp folder.
-        settings['HTTPCACHE_DIR'] =  "/tmp"
+        settings['HTTPCACHE_DIR'] = "/tmp"
     else:
         feed_uri = "file://{}/%(name)s-{}-%(time)s.json"
 

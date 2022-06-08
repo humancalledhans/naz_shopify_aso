@@ -20,7 +20,7 @@ class ScrapeAllAppreviewsPipeline:
 
     def upload_to_db(self, appreview_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -49,6 +49,33 @@ class ScrapeAllAppreviewsPipeline:
 
         # print("LEN_OF_COLUMNS", len(columns))
         # print("LEN_OF_VALUES", len(values))
+
+        app_id_index = columns.index('app_id')
+        app_id = values[app_id_index]
+
+        author_index = columns.index('author')
+        author = values[author_index]
+
+        rating_index = columns.index('rating')
+        rating = values[rating_index]
+
+        posted_at_index = columns.index('posted_at')
+        posted_at = values[posted_at_index]
+
+        body_index = columns.index('body')
+        body = values[body_index]
+
+        helpful_count_index = columns.index('helpful_count')
+        helpful_count = values[helpful_count_index]
+
+        developer_reply_index = columns.index('developer_reply')
+        developer_reply = values[developer_reply_index]
+
+        developer_reply_date_index = columns.index('developer_reply_date')
+        developer_reply_date = values[developer_reply_date_index]
+
+        values = (app_id, author, rating, posted_at, body,
+                  helpful_count, developer_reply, developer_reply_date)
 
         insert_stmt = """
             REPLACE INTO app_review ( app_id, author, rating, posted_at, body, helpful_count, developer_reply, developer_reply_date ) 

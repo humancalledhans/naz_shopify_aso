@@ -89,7 +89,7 @@ class CatranknewestDataScrapeSpider(scrapy.spiders.SitemapSpider):
 
     BASE_DOMAIN = "apps.shopify.com"
 
-    name = 'catranknewest_data_scrape'
+    name = 'scrape_all_catranknewest'
     allowed_domains = ['apps.shopify.com']
     sitemap_urls = ['https://apps.shopify.com/sitemap.xml']
     sitemap_rules = [

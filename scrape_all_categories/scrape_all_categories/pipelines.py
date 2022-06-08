@@ -10,10 +10,9 @@ class ScrapeAllCategoriesPipeline:
             # return "Apps are now stored in CSV File."
             return item
 
-
     def upload_to_db(self, category_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022', 
-            host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -23,9 +22,10 @@ class ScrapeAllCategoriesPipeline:
             category_description VARCHAR(65535),
         );"""
 
-
-        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_') for x in category_data.keys())
-        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_') for x in category_data.values())
+        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                        for x in category_data.keys())
+        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                       for x in category_data.values())
 
         columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
         values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
@@ -34,6 +34,17 @@ class ScrapeAllCategoriesPipeline:
 
         # print("LEN_OF_COLUMNS", len(columns))
         # print("LEN_OF_VALUES", len(values))
+
+        category_id_index = columns.index('category_id')
+        category_id = values[category_id_index]
+
+        category_title_index = columns.index('category_title')
+        category_title = values[category_title_index]
+
+        category_description_index = columns.index('category_description')
+        category_description = values[category_description_index]
+
+        values = (category_id, category_title, category_description)
 
         insert_stmt = """
             REPLACE INTO category ( category_id, category_title, category_description ) VALUES ( %s, %s, %s )
@@ -44,7 +55,7 @@ class ScrapeAllCategoriesPipeline:
 
         cnx.commit()
         cursor.close()
-        cnx.close() # closing the connection.
+        cnx.close()  # closing the connection.
 
 # class ReturnInCSV(object):
 #     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"

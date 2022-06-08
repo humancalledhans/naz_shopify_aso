@@ -11,10 +11,9 @@ class ScrapeAllCatrankinstalledPipeline:
             # return "Apps are now stored in CSV File."
             return item
 
-
     def upload_to_db(self, cat_rank_installed_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022', 
-            host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -25,9 +24,10 @@ class ScrapeAllCatrankinstalledPipeline:
             date_time_scraped DATE
         );"""
 
-
-        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_') for x in cat_rank_installed_data.keys())
-        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_') for x in cat_rank_installed_data.values())
+        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                        for x in cat_rank_installed_data.keys())
+        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                       for x in cat_rank_installed_data.values())
 
         columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
         values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
@@ -48,7 +48,7 @@ class ScrapeAllCatrankinstalledPipeline:
 
         date_time_scraped = datetime.now()
 
-        values = (f"{cat_id},{ranking},{app_id},{date_time_scraped}")
+        values = (cat_id, ranking, app_id, date_time_scraped)
 
         insert_stmt = """
             INSERT INTO cat_rank_installed ( cat_id, rank, app_id, date_time_scraped ) VALUES ( %s, %s, %s, %s )
@@ -59,7 +59,7 @@ class ScrapeAllCatrankinstalledPipeline:
 
         cnx.commit()
         cursor.close()
-        cnx.close() # closing the connection.
+        cnx.close()  # closing the connection.
 
 # class ReturnInCSV(object):
 #     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
