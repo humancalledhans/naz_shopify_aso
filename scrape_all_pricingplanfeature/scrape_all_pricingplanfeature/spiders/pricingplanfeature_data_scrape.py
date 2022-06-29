@@ -34,8 +34,9 @@ class PricingplanfeatureDataScrapeSpider(scrapy.spiders.SitemapSpider):
         app_id = hashlib.md5(app_url.lower().encode()).hexdigest()
 
         for pricing_plan in response.css('.ui-card.pricing-plan-card'):
+
             pricing_plan_id = hashlib.md5(
-                pricing_plan.upper().encode()).hexdigest()
+                str(pricing_plan).encode()).hexdigest()
 
             for feature in pricing_plan.css('ul li.bullet'):
                 yield PricingPlanFeature(app_id=app_id, pricing_plan_id=pricing_plan_id,

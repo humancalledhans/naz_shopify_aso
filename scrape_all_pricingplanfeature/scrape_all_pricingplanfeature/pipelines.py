@@ -11,12 +11,12 @@ class ScrapeAllPricingplanfeaturePipeline:
 
     def upload_to_db(self, pricingplanfeature_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS pricing_plan_feature (
-            pricing_plan_id VARCHAR(255) NOT PRIMARY KEY,
+            pricing_plan_id VARCHAR(255) PRIMARY KEY,
             app_id VARCHAR(65535) NOT NULL,
             feature_description VARCHAR(65535) NOT NULL
         );"""
@@ -43,7 +43,7 @@ class ScrapeAllPricingplanfeaturePipeline:
         feature_description_index = columns.index('feature_description')
         feature_description = values[feature_description_index]
 
-        values = (f"{app_id}, {pricing_plan_id}, {feature_description}")
+        values = (app_id, pricing_plan_id, feature_description)
 
         insert_stmt = """
             REPLACE INTO pricing_plan_feature ( app_id, pricing_plan_id, feature_description ) 

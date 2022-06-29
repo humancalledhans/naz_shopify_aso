@@ -1,18 +1,19 @@
-import csv
 import mysql.connector
-from .items import Developer
+from .items import Developer, DevelopedAppsMediator
 
 
 class ScrapeAllDevelopersPipeline:
     def process_item(self, item, spider):
         if isinstance(item, Developer):
             self.upload_to_db(item)
-            # return "Apps are now stored in CSV File."
+            return item
+        elif isinstance(item, DevelopedAppsMediator):
+            self.upload_mediator_to_db(item)
             return item
 
     def upload_to_db(self, developer_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -33,11 +34,6 @@ class ScrapeAllDevelopersPipeline:
 
         columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
         values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
-        # print("COLUMNS AFTER MAPPING ", columns)
-        # print("VALUES AFTER MAPPING", values)
-
-        # print("LEN_OF_COLUMNS", len(columns))
-        # print("LEN_OF_VALUES", len(values))
 
         dev_id_index = columns.index('dev_id')
         dev_id = values[dev_id_index]
@@ -60,15 +56,8 @@ class ScrapeAllDevelopersPipeline:
         dev_website_index = columns.index('dev_website')
         dev_website = values[dev_website_index]
 
-        developed_apps_index = columns.index('developed_apps')
-        developed_apps_list = values[developed_apps_index]
-
-        self.add_developed_apps_mediator(
-            cursor=cursor, cnx=cnx, dev_id=dev_id, developed_apps_list=developed_apps_list)
-
-        values = (f"{dev_id}, {dev_support_email}, {dev_support_number}, \
-            {dev_average_rating}, {dev_partners_href}, {dev_experience}, \
-            {dev_website}")  # TODO: DEVELOPED_APPS WONT WORK!
+        values = (dev_id, dev_support_email, dev_support_number,
+                  dev_average_rating, dev_partners_href, dev_experience, dev_website)
 
         insert_stmt = """
             INSERT INTO developer ( dev_id, dev_support_email, dev_support_number, dev_average_rating, dev_partners_href, dev_experience, dev_website ) VALUES ( %s, %s, %s, %s, %s, %s, %s )
@@ -81,63 +70,37 @@ class ScrapeAllDevelopersPipeline:
         cursor.close()
         cnx.close()  # closing the connection.
 
-    def add_developed_apps_mediator(self, cursor, cnx, dev_id, developed_apps_list):
+    def upload_mediator_to_db(self, mediator_data):
+        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
+        cursor = cnx.cursor()
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS developed_apps_mediator(
-            dev_id VARCHAR(65535) NOT NULL,
-            developed_app VARCHAR(65535) NOT NULL
-        )
+            dev_id VARCHAR(255) PRIMARY KEY,
+            developed_app VARCHAR(25535)
+        );"""
+
+        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                        for x in mediator_data.keys())
+        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                       for x in mediator_data.values())
+
+        columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
+        values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
+
+        dev_id_index = columns.index('dev_id')
+        dev_id = values[dev_id_index]
+
+        developed_app_index = columns.index('developed_app')
+        developed_app = values[developed_app_index]
+
+        values = (dev_id, developed_app)
+
+        insert_stmt = """
+        REPLACE INTO developed_apps_mediator ( dev_id, developed_app ) VALUES ( %s, %s )
         """
 
-        for developed_app in developed_apps_list:
-            values = (f"{dev_id}, {developed_app}")
-            insert_stmt = """
-            REPLACE INTO developed_apps_mediator ( dev_id, developed_app ) VALUES ( %s, %s )
-            """
-
-            cursor.execute(create_table_statement)
-            cursor.execute(insert_stmt, values)
-            cnx.commit()
-
-
-# class ReturnInCSV(object):
-#     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
-
-#     def open_spider(self, spider):
-#         self.write_file_headers()
-
-#     def process_item(self, item, spider):
-
-#         if isinstance(item, Developer):
-#             self.store_developer(item)
-#             # return "Developer objects are now stored in CSV File."
-#             return item
-
-
-#         return item
-
-#     def write_file_headers(self):
-
-#         self.write_header("developer.csv",
-#             ['developer_id', 'support_email', 'support_number', 'average_rating', 'shopify_link', 'experience', 'website', 'developed_apps']
-#             )
-
-
-#         return
-
-
-#     def store_developer(self, developer):
-#         self.write_to_out('developer.csv', developer)
-#         return developer
-
-
-#     def write_to_out(self, file_name, row):
-#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-#             csv_output = csv.writer(output)
-#             csv_output.writerow(dict(row).values())
-
-#     def write_header(self, file_name, row):
-#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-#             csv_output = csv.writer(output)
-#             csv_output.writerow(row)
+        cursor.execute(create_table_statement)
+        cursor.execute(insert_stmt, values)
+        cnx.commit()

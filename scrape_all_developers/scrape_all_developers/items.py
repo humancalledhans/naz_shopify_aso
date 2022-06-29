@@ -1,5 +1,6 @@
 import scrapy
 
+
 class Developer(scrapy.Item):
     dev_id = scrapy.Field()
     dev_support_email = scrapy.Field()
@@ -9,3 +10,8 @@ class Developer(scrapy.Item):
     dev_experience = scrapy.Field()
     dev_website = scrapy.Field()
     developed_apps = scrapy.Field()
+
+
+class DevelopedAppsMediator(scrapy.Item):
+    dev_id = scrapy.Field()
+    developed_app = scrapy.Field()

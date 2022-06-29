@@ -1,40 +1,34 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
+# appreviews scraper works.
 
-
-# useful for handling different item types with a single interface
-import csv
+import hashlib
 import mysql.connector
 from .items import AppReview
-# from itemadapter import ItemAdapter
+from datetime import datetime
 
 
 class ScrapeAllAppreviewsPipeline:
     def process_item(self, item, spider):
         if isinstance(item, AppReview):
             self.upload_to_db(item)
-            # return "Apps are now stored in CSV File."
             return item
 
     def upload_to_db(self, appreview_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS app_review(
-            app_review_id INT PRIMARY KEY AUTO_INCREMENT,
+            app_review_id VARCHAR(255) PRIMARY KEY,
             app_id VARCHAR(65535) NOT NULL,
             author VARCHAR(65535) NOT NULL,
-            rating DECIMAL(2,2),
-            posted_at VARCHAR(65535),
+            rating INT(11) NOT NULL,
+            posted_at DATE,
             body VARCHAR(65535) NOT NULL,
             helpful_count VARCHAR(65535),
             developer_reply VARCHAR(65535),
             developer_reply_date DATE
-                
+
         );"""
 
         columns = 'AaT3C~*~GA@PQT'.join(str(x)
@@ -57,7 +51,7 @@ class ScrapeAllAppreviewsPipeline:
         author = values[author_index]
 
         rating_index = columns.index('rating')
-        rating = values[rating_index]
+        rating = int(values[rating_index])
 
         posted_at_index = columns.index('posted_at')
         posted_at = values[posted_at_index]
@@ -74,12 +68,37 @@ class ScrapeAllAppreviewsPipeline:
         developer_reply_date_index = columns.index('developer_reply_date')
         developer_reply_date = values[developer_reply_date_index]
 
-        values = (app_id, author, rating, posted_at, body,
+        app_review_id = hashlib.md5(
+            (body+app_id).lower().encode()).hexdigest()
+        # so that we replace the same app reviews whenever we scrape again. like, when the developer adds a reply, the same app review is replaced, instead of inserting a new entry.
+
+        if posted_at == '':
+            posted_at = None
+        elif posted_at is None:
+            posted_at = None
+        elif posted_at == 'None':
+            posted_at = None
+        else:
+            posted_at = datetime.strptime(posted_at, "%B %d, %Y")
+
+            print("POSTED_AT:", posted_at)
+
+        if developer_reply_date == '':
+            developer_reply_date = None
+        elif developer_reply_date is None:
+            developer_reply_date = None
+        elif developer_reply_date == 'None':
+            developer_reply_date = None
+        else:
+            developer_reply_date = datetime.strptime(
+                developer_reply_date, "%B %d, %Y")
+
+        values = (app_review_id, app_id, author, rating, posted_at, body,
                   helpful_count, developer_reply, developer_reply_date)
 
         insert_stmt = """
-            REPLACE INTO app_review ( app_id, author, rating, posted_at, body, helpful_count, developer_reply, developer_reply_date ) 
-            VALUES ( %s, %s, %s, %s, %s, %s, %s, %s )
+            REPLACE INTO app_review ( app_review_id, app_id, author, rating, posted_at, body, helpful_count, developer_reply, developer_reply_date )
+            VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s )
             """
 
         cursor.execute(create_table_statement)
@@ -88,48 +107,3 @@ class ScrapeAllAppreviewsPipeline:
         cnx.commit()
         cursor.close()
         cnx.close()  # closing the connection.
-
-
-# class ReturnInCSV(object):
-#     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
-
-#     def open_spider(self, spider):
-#         self.write_file_headers()
-
-#     def process_item(self, item, spider):
-#         if isinstance(item, App):
-#             self.store_app(item)
-#             # return "Apps are now stored in CSV File."
-#             return item
-
-#         if isinstance(item, AppReview):
-#             self.store_app_review(item)
-#             # return "AppReview objects are now stored in CSV File."
-#             return item
-
-#         return item
-
-#     def write_file_headers(self):
-
-#         self.write_header("reviews.csv",
-#             ['app_id', 'author', 'rating', 'posted_at', 'body',
-#             'helpful_count', 'developer_reply', 'developer_reply_date']
-#             )
-
-#         return
-
-
-#     def store_app_review(self, app_review):
-#         self.write_to_out('reviews.csv', app_review)
-#         return app_review
-
-
-#     def write_to_out(self, file_name, row):
-#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-#             csv_output = csv.writer(output)
-#             csv_output.writerow(dict(row).values())
-
-#     def write_header(self, file_name, row):
-#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-#             csv_output = csv.writer(output)
-#             csv_output.writerow(row)

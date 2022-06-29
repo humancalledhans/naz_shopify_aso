@@ -11,7 +11,7 @@ class ScrapeAllSubcatrankingrelevancePipeline:
 
     def upload_to_db(self, subcatrankrelevance_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """

@@ -61,15 +61,17 @@ class AppreviewDataScrapeSpider(scrapy.spiders.SitemapSpider):
     def parse_app_reviews(self, response):
         app_id = response.meta.get('app_id')
 
-        for review in response.xpath("//div[@class='review-listing ']"):
+        for count, review in enumerate(response.xpath("//div[@class='review-listing ']")):
             author = review.css(
                 '.review-listing-header>h3 ::text').extract_first(default='').strip()
             rating = review.css(
                 '.review-metadata>div:nth-child(1) .ui-star-rating::attr(data-rating)').extract_first(
                 default='').strip()
-            posted_at = review.css(
-                '.review-metadata>div:nth-child(2) .review-metadata__item-value ::text').extract_first(
-                default='').strip()
+            # posted_at = review.css(
+            #     '.review-metadata>div:nth-child(2) .review-metadata__item-value ::text').extract_first(
+            #     default='').strip()
+            posted_at = response.xpath(
+                f"(//div[@class='review-metadata__item-label'])[{count+1}]//text()").get().strip().replace("Edited ", "")
             body = BeautifulSoup(review.css(
                 '.review-content div').extract_first(), features='lxml').get_text().strip()
             helpful_count = review.css(
@@ -113,5 +115,5 @@ class AppreviewDataScrapeSpider(scrapy.spiders.SitemapSpider):
         next_page_path = response.css(
             'a.search-pagination__next-page-text::attr(href)').extract_first()
         if next_page_path:
-            return Request(f"https://{self.BASE_DOMAIN}{next_page_path}", callback=self.parse_app_reviews,
-                           meta={'app_id': response.meta.get('app_id')})
+            yield Request(f"https://{self.BASE_DOMAIN}{next_page_path}", callback=self.parse_app_reviews,
+                          meta={'app_id': response.meta.get('app_id')})

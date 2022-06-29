@@ -11,7 +11,7 @@ class ScrapeAllSubcategoryappsPipeline:
 
     def upload_to_db(self, subcategoryapps_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -35,9 +35,7 @@ class ScrapeAllSubcategoryappsPipeline:
         app_id_index = columns.index('app_id')
         app_id = values[app_id_index]
 
-        values = (
-            f"{subcategory_id}, {app_id}"
-        )
+        values = (subcategory_id, app_id)
 
         insert_stmt = """
             REPLACE INTO subcategory_app ( subcategory_id, app_id ) VALUES ( %s, %s )

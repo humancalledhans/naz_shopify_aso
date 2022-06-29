@@ -1,30 +1,17 @@
 import time
 from ..items import CategoryRankingInstalled
 
-import random
 import scrapy
 import re
 import hashlib
-import pandas as pd
 
 from scrapy import Request
 
-from selenium.webdriver import Chrome
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-
-from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver import ActionChains
-
-from webscrapingapi_scrapy_sdk import WebScrapingApiSpider, WebScrapingApiRequest
-
 
 def scrape_category_rankings(browse_page_url, id, is_category, end_link_to_append, sort_by_to_append):
 
@@ -84,7 +71,7 @@ def scrape_category_rankings(browse_page_url, id, is_category, end_link_to_appen
         if is_category:
             if "&sort_by=installed" in driver.current_url:
                 for app_id in app_id_ranking_list:
-                    return CategoryRankingInstalled(category_id=id, ranking=app_id[0], app_id=app_id[1])
+                    yield CategoryRankingInstalled(category_id=id, ranking=app_id[0], app_id=app_id[1])
 
 
 class CatrankinstalledDataScrapeSpider(scrapy.spiders.SitemapSpider):
@@ -105,21 +92,6 @@ class CatrankinstalledDataScrapeSpider(scrapy.spiders.SitemapSpider):
         'DOWNLOAD_DELAY': 3,
     }
 
-    @staticmethod
-    def close(spider, reason):
-        spider.logger.info('Spider closed: %s', spider.name)
-        spider.logger.info('Preparing unique categories...')
-
-        # Normalize category_ranking_most_installed
-        categories_df = pd.read_csv(
-            '/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/category_ranking_installed.csv')
-        categories_df.drop_duplicates(subset=['category_id', 'app_id_list']).to_csv(
-            '/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/category_ranking_installed.csv', index=False)
-
-        spider.logger.info('Unique category rankings are there 👌')
-
-        return super().close(spider, reason)
-
     def parse_subcategories_of_categories(self, response):
 
         url_obtained = response.url
@@ -136,7 +108,8 @@ class CatrankinstalledDataScrapeSpider(scrapy.spiders.SitemapSpider):
             url_obtained_browse_page = browse_link_first.group().replace(
                 'https://apps.shopify.com/categories/', 'https://apps.shopify.com/browse/')
 
-            yield Request(url=url_obtained_browse_page, callback=self.parse_category_browse_page_for_description)
+            # NEEDS to be yield, yield, return or yield, return, return.
+            return Request(url=url_obtained_browse_page, callback=self.parse_category_browse_page_for_description)
 
     def parse_category_browse_page_for_description(self, response):
 
@@ -153,4 +126,5 @@ class CatrankinstalledDataScrapeSpider(scrapy.spiders.SitemapSpider):
         sort_by_to_append = ["&pricing=all&requirements=off&sort_by=installed"]
 
         for sort_by in sort_by_to_append:
-            yield scrape_category_rankings(browse_page_url=response.url, id=category_id, is_category=True, end_link_to_append=end_link_to_append, sort_by_to_append=sort_by)
+            # needs to be 'return'.
+            return scrape_category_rankings(browse_page_url=response.url, id=category_id, is_category=True, end_link_to_append=end_link_to_append, sort_by_to_append=sort_by)

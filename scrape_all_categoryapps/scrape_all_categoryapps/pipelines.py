@@ -12,7 +12,7 @@ class ScrapeAllCategoryappsPipeline:
 
     def upload_to_db(self, categoryapp_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """

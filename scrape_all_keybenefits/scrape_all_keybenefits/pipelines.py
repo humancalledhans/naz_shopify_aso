@@ -12,7 +12,7 @@ class ScrapeAllKeybenefitsPipeline:
 
     def upload_to_db(self, keybenefit_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -46,8 +46,7 @@ class ScrapeAllKeybenefitsPipeline:
 
         scraped_date_time = datetime.now()
 
-        values = (
-            f"{app_id}, {title}, {benefit_description}, {scraped_date_time}")
+        values = (app_id, title, benefit_description, scraped_date_time)
         insert_stmt = """
         INSERT INTO key_benefit ( app_id, title, benefit_description, scraped_date_time ) 
         VALUES ( %s, %s, %s, %s )

@@ -50,10 +50,11 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-#DOWNLOADER_MIDDLEWARES = {
-#    'scrape_all_pricingplanfeature.middlewares.ScrapeAllPricingplanfeatureDownloaderMiddleware': 543,
-#}
-
+DOWNLOADER_MIDDLEWARES = {
+	'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+	'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400, # this will use the 2,200 user agents from the scrapy_user_agents package.
+	'webscrapingapi_scrapy_sdk.WebScrapingApiMiddleware': 543,
+	}
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
 #EXTENSIONS = {

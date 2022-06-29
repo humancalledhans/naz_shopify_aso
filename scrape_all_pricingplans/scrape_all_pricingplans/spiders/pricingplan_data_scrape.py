@@ -35,7 +35,7 @@ class PricingplanDataScrapeSpider(scrapy.spiders.SitemapSpider):
 
         for pricing_plan in response.css('.ui-card.pricing-plan-card'):
             pricing_plan_id = hashlib.md5(
-                pricing_plan.upper().encode()).hexdigest()
+                str(pricing_plan).encode()).hexdigest()
             yield PricingPlan(pricing_plan_id=pricing_plan_id,
                               app_id=app_id,
                               pricing_plan_title=pricing_plan.css('.pricing-plan-card__title-kicker ::text').extract_first(

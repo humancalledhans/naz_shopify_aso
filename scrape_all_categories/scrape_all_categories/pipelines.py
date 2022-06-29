@@ -1,4 +1,4 @@
-import csv
+# python3 launcher.py works. data saved in db.
 import mysql.connector
 from .items import Category
 
@@ -12,14 +12,14 @@ class ScrapeAllCategoriesPipeline:
 
     def upload_to_db(self, category_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS category(
             category_id VARCHAR(65535) NOT NULL,
             category_title VARCHAR(65535) NOT NULL,
-            category_description VARCHAR(65535),
+            category_description VARCHAR(65535)
         );"""
 
         columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_')

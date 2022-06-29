@@ -1,1 +1,1 @@
-{'url': 'https://apps.shopify.com/graphpath-app-prod', 'method': 'GET', 'status': 200, 'response_url': 'https://apps.shopify.com/graphpath-app-prod', 'timestamp': 1650520189.654664}
+{'url': 'https://apps.shopify.com/graphpath-app-prod', 'method': 'GET', 'status': 429, 'response_url': 'https://apps.shopify.com/graphpath-app-prod', 'timestamp': 1656058263.804181}

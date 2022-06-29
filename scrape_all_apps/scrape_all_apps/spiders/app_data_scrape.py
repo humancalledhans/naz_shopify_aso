@@ -145,6 +145,12 @@ class AppDataScrapeSpider(scrapy.spiders.SitemapSpider):
 
         # performed ".replace("'", "\\'")" for all elements in list.
 
+        # this comes at the end after all apps are yielded?
+        for affinity_app_id in affinity_apps_id_list:
+            yield AffinityAppMediator(
+                app_id=app_id,
+                affinity_app_id=affinity_app_id,
+            )
         yield App(
             app_id=app_id,
             app_logo=image_url,
@@ -162,9 +168,3 @@ class AppDataScrapeSpider(scrapy.spiders.SitemapSpider):
             app_integrated_apps=integrations_list,
 
         )
-
-        for affinity_app_id in affinity_apps_id_list:
-            yield AffinityAppMediator(
-                app_id=app_id,
-                affinity_app_id=affinity_app_id,
-            )

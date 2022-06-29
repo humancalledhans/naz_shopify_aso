@@ -7,7 +7,7 @@
 #     https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 #     https://docs.scrapy.org/en/latest/topics/spider-middleware.html
 
-BOT_NAME = 'scrape_all_subcategories'
+BOT_NAME = 'subcategory_data_scrape'
 
 SPIDER_MODULES = ['scrape_all_subcategories.spiders']
 NEWSPIDER_MODULE = 'scrape_all_subcategories.spiders'
@@ -50,9 +50,11 @@ ROBOTSTXT_OBEY = True
 
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
-# DOWNLOADER_MIDDLEWARES = {
-#    'scrape_all_subcategories.middlewares.ScrapeAllSubcategoriesDownloaderMiddleware': 543,
-# }
+DOWNLOADER_MIDDLEWARES = {
+	'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware': None,
+	'scrapy_user_agents.middlewares.RandomUserAgentMiddleware': 400, # this will use the 2,200 user agents from the scrapy_user_agents package.
+	'webscrapingapi_scrapy_sdk.WebScrapingApiMiddleware': 543,
+	}
 
 # Enable or disable extensions
 # See https://docs.scrapy.org/en/latest/topics/extensions.html
@@ -84,6 +86,5 @@ ITEM_PIPELINES = {
 HTTPCACHE_ENABLED = True
 HTTPCACHE_EXPIRATION_SECS = 60 * 60 * 24 * 7
 HTTPCACHE_DIR = 'httpcache'
-CLOSESPIDER_PAGECOUNT = 32
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'

@@ -1,6 +1,8 @@
+import mysql.connector
 import csv
 from .items import CategoryRankingRelevance
 from datetime import datetime
+
 
 class ScrapeAllCatrankrelevancePipeline:
     def process_item(self, item, spider):
@@ -9,23 +11,22 @@ class ScrapeAllCatrankrelevancePipeline:
             # return "Apps are now stored in CSV File."
             return item
 
-
-    def upload_to_db(self, cat_rank_rel_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022', 
-            host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+    def upload_to_db(self, cat_rank_relevance_data):
+        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS cat_rank_relevance(
-            cat_id VARCHAR(65535) NOT NULL,
-            rank INT NOT NULL,
-            app_id VARCHAR(65535),
-            date_time_scraped DATE
+            cat_id VARCHAR(255) NOT NULL,
+            ranking INT NOT NULL,
+            app_id VARCHAR(255) NOT NULL,
+            date_time_scraped TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         );"""
-
-
-        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_') for x in cat_rank_rel_data.keys())
-        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_') for x in cat_rank_rel_data.values())
+        columns = 'AaT3C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                        for x in cat_rank_relevance_data.keys())
+        values = 'AaT7C~*~GA@PQT'.join(str(x).replace('/', '_')
+                                       for x in cat_rank_relevance_data.values())
 
         columns = tuple(map(str, columns.split('AaT3C~*~GA@PQT')))
         values = tuple(map(str, values.split('AaT7C~*~GA@PQT')))
@@ -38,18 +39,16 @@ class ScrapeAllCatrankrelevancePipeline:
         cat_id_index = columns.index('category_id')
         cat_id = values[cat_id_index]
 
-        rank_index = columns.index('ranking')
-        rank = values[rank_index]
-
         app_id_index = columns.index('app_id')
         app_id = values[app_id_index]
 
-        date_time_scraped = datetime.now()
+        ranking_index = columns.index('ranking')
+        ranking = values[ranking_index]
 
-        values = (f"{cat_id}, {rank}, {app_id}, {date_time_scraped}")
+        values = (app_id, cat_id, ranking)
 
         insert_stmt = """
-            INSERT INTO cat_rank_relevance ( cat_id, rank, app_id, date_time_scraped ) VALUES ( %s, %s, %s, %s )
+            INSERT INTO cat_rank_relevance (app_id, cat_id, ranking) VALUES ( %s, %s, %s )
             """
 
         cursor.execute(create_table_statement)
@@ -57,33 +56,33 @@ class ScrapeAllCatrankrelevancePipeline:
 
         cnx.commit()
         cursor.close()
-        cnx.close() # closing the connection.
+        cnx.close()  # closing the connection.
+
 
 # class ReturnInCSV(object):
 #     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
+#     FILE_NAME = "category_ranking_installed_latest_return_yield_return.csv"
 
 #     def open_spider(self, spider):
 #         self.write_file_headers()
 
 #     def process_item(self, item, spider):
-#         if isinstance(item, CategoryRankingRelevance):
-#             self.store_categoryrankingrelevance(item)
+#         if isinstance(item, CategoryRankingInstalled):
+#             self.store_categoryrankinginstalled(item)
 #             return item
 
 #         return item
 
-
 #     def write_file_headers(self):
-#         self.write_header("category_ranking_relevance.csv",
-#             ['category_id', 'app_id_list']
-#             )
-
+#         self.write_header(self.FILE_NAME,
+#                           ['cat_id', 'rank', 'app_id']
+#                           )
 #         return
 
-#     def store_categoryrankingrelevance(self, category_ranking_relevance):
-#         self.write_to_out('category_ranking_relevance.csv', category_ranking_relevance)
+#     def store_categoryrankinginstalled(self, category_ranking_installed):
+#         self.write_to_out(self.FILE_NAME,
+#                           category_ranking_installed)
 #         return category_ranking_installed
-
 
 #     def write_to_out(self, file_name, row):
 #         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:

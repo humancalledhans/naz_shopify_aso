@@ -1,12 +1,10 @@
-import csv
+# pushed to docker on aws.
+# python3 launcher.py works. data saved in db.
+
 from .items import AffinityAppMediator, App
 
 import mysql.connector
 from datetime import datetime
-import re
-import sys
-import boto3
-import os
 
 
 class ScrapeAllAppsPipeline:
@@ -17,10 +15,11 @@ class ScrapeAllAppsPipeline:
             return item
         elif isinstance(item, AffinityAppMediator):
             self.upload_mediator_to_db(item)
+            return item
 
     def upload_to_db(self, app_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -38,7 +37,7 @@ class ScrapeAllAppsPipeline:
             app_pricing_hint VARCHAR(65535),
             app_url VARCHAR(65535),
             app_published_date DATE NOT NULL,
-            scraped_date_time DATE NOT NULL,
+            scraped_date_time DATE NOT NULL
 
         );"""
 
@@ -63,6 +62,8 @@ class ScrapeAllAppsPipeline:
 
         app_intro_vid_url_index = columns.index('app_intro_vid_url')
         app_intro_vid_url = values[app_intro_vid_url_index]
+        if app_intro_vid_url == 'None':
+            app_intro_vid_url = None
 
         app_developer_link_index = columns.index('app_developer_link')
         app_developer_link = values[app_developer_link_index]
@@ -94,11 +95,12 @@ class ScrapeAllAppsPipeline:
 
         scraped_date_time = datetime.now()
 
-        app_values = (app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date, scraped_date_time)
-        
+        app_values = (app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description,
+                      app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date, scraped_date_time)
+
         insert_stmt = """
-            INSERT INTO app ( app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date )
-            VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )
+            REPLACE INTO app ( app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date, scraped_date_time )
+            VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )
             """
 
         # print("LEN_OF_COLUMNS", len(columns))
@@ -121,7 +123,7 @@ class ScrapeAllAppsPipeline:
         );"""
 
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='sys')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         columns = 'AaT3C~*~GA@PQT'.join(str(x)
@@ -146,42 +148,3 @@ class ScrapeAllAppsPipeline:
         cursor.execute(create_table_statement)
         cursor.execute(insert_stmt, values)
         cnx.commit()
-
-
-# class ReturnInCSV(object):
-#     OUTPUT_DIRECTORY = "/Users/hans/Desktop/Files/Non-Monash/Business/Working/2022/Main/Naz - Dev Apps/scraper_csv_files/AWS-Tester/"
-
-#     def open_spider(self, spider):
-#         self.write_file_headers()
-
-#     def process_item(self, item, spider):
-#         if isinstance(item, App):
-#             self.store_app(item)
-#             # return "Apps are now stored in CSV File."
-#             return item
-
-#         return item
-
-#     def write_file_headers(self):
-#         self.write_header("apps.csv",
-#                           ['app_id', 'app_logo', 'app_title', 'app_intro_vid_url', 'app_developer_link', 'app_illustration_images',
-#                            'app_brief_description', 'app_full_description',
-#                            'app_rating', 'app_num_of_reviews', 'app_pricing_hint', 'app_url', 'app_published_date',
-#                            'app_integrated_apps', 'affinity_apps_id_list', 'app_category_id_list']
-#                           )
-
-#         return
-
-#     def store_app(self, app):
-#         self.write_to_out('apps.csv', app)
-#         return app
-
-#     def write_to_out(self, file_name, row):
-#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-#             csv_output = csv.writer(output)
-#             csv_output.writerow(dict(row).values())
-
-#     def write_header(self, file_name, row):
-#         with open(f"{self.OUTPUT_DIRECTORY}{file_name}", 'a', encoding='utf-8') as output:
-#             csv_output = csv.writer(output)
-#             csv_output.writerow(row)

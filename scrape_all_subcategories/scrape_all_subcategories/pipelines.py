@@ -12,7 +12,7 @@ class ScrapeAllSubcategoriesPipeline:
 
     def upload_to_db(self, subcategory_data):
         cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
-                                      host='naz-shopify-aso-db.cluster-c200z18i1oar.us-east-1.rds.amazonaws.com', database='naz_shopify_aso_DB')
+                                      host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
         create_table_statement = """
@@ -48,14 +48,13 @@ class ScrapeAllSubcategoriesPipeline:
         subcategory_name_index = columns.index('subcategory_name')
         subcategory_name = values[subcategory_name_index]
 
-        parent_category_id_index = columns.index('parent_category_name')
+        parent_category_id_index = columns.index('parent_category_id')
         parent_category_id = values[parent_category_id_index]
 
         parent_category_name_index = columns.index('parent_category_name')
         parent_category_name = values[parent_category_name_index]
 
-        values = (
-            f"{subcategory_id}, {subcategory_description}, {subcategory_name}, {parent_category_id}, {parent_category_name}")
+        values = (subcategory_id, subcategory_description, subcategory_name, parent_category_id, parent_category_name)
 
         insert_stmt = """
             REPLACE INTO subcategory ( subcategory_id, subcategory_description, subcategory_name, parent_category_id, parent_category_name ) VALUES ( %s, %s, %s, %s, %s )
