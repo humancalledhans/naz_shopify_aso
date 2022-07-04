@@ -16,9 +16,10 @@ class ScrapeAllPricingplanfeaturePipeline:
 
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS pricing_plan_feature (
-            pricing_plan_id VARCHAR(255) PRIMARY KEY,
+            pricing_plan_id VARCHAR(65535) NOT NULL,
             app_id VARCHAR(65535) NOT NULL,
-            feature_description VARCHAR(65535) NOT NULL
+            feature_description VARCHAR(65535) NOT NULL,
+            date_time_scraped TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         );"""
 
         columns = 'AaT3C~*~GA@PQT'.join(str(x)
@@ -43,10 +44,10 @@ class ScrapeAllPricingplanfeaturePipeline:
         feature_description_index = columns.index('feature_description')
         feature_description = values[feature_description_index]
 
-        values = (app_id, pricing_plan_id, feature_description)
+        values = (pricing_plan_id, app_id, feature_description)
 
         insert_stmt = """
-            REPLACE INTO pricing_plan_feature ( app_id, pricing_plan_id, feature_description ) 
+            REPLACE INTO pricing_plan_feature ( pricing_plan_id, app_id, feature_description ) 
             VALUES ( %s, %s, %s )
             """
 

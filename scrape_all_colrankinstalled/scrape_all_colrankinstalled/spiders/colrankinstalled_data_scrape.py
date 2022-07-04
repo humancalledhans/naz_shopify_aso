@@ -1,29 +1,18 @@
 import time
 from ..items import CollectionRankingInstalled
 
-import random
 import scrapy
 import re
 import hashlib
 import pandas as pd
 
-from scrapy import Request
-
-from selenium.webdriver import Chrome
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
 
 from selenium.common.exceptions import NoSuchElementException
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support.ui import Select
-from selenium.webdriver import ActionChains
-
-from webscrapingapi_scrapy_sdk import WebScrapingApiSpider, WebScrapingApiRequest
 
 
 def scrape_collection_rankings(collection_page_url, id, end_link_to_append, sort_by_to_append):

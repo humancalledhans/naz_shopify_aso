@@ -16,6 +16,7 @@ class App(scrapy.Item):
     app_url = scrapy.Field()
     app_published_date = scrapy.Field()
     app_integrated_apps = scrapy.Field()
+    app_monetized_bool = scrapy.Field()
 
 
 class AffinityAppMediator(scrapy.Item):

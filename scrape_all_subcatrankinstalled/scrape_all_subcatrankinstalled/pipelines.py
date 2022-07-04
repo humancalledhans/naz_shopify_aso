@@ -17,9 +17,9 @@ class ScrapeAllSubcatrankinstalledPipeline:
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS subcat_rank_installed(
             subcat_id VARCHAR(65535) NOT NULL,
-            rank INT NOT NULL,
+            ranking INT NOT NULL,
             app_id VARCHAR(65535) NOT NULL,
-            date_time_scraped DATE NOT NULL
+            scraped_date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         );
         """
 
@@ -40,12 +40,10 @@ class ScrapeAllSubcatrankinstalledPipeline:
         app_id_index = columns.index('app_id')
         app_id = values[app_id_index]
 
-        date_time_scraped = datetime.now()
-
-        values = (f"{subcategory_id}, {rank}, {app_id}, {date_time_scraped}")
+        values = (subcategory_id, rank, app_id)
 
         insert_stmt = """
-            INSERT INTO subcat_rank_installed ( subcat_id, rank, app_id, date_time_scraped ) VALUES ( %s, %s, %s, %s )
+            INSERT INTO subcat_rank_installed ( subcat_id, ranking, app_id ) VALUES ( %s, %s, %s )
             """
 
         cursor.execute(create_table_statement)

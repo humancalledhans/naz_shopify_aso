@@ -18,7 +18,7 @@ class ScrapeAllCatranknewestPipeline:
         create_table_statement = """
         CREATE TABLE IF NOT EXISTS cat_rank_newest(
             cat_id VARCHAR(65535) NOT NULL,
-            ranking INT(5),
+            ranking INT NOT NULL,
             app_id VARCHAR(65535) NOT NULL,
             date_time_scraped TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         );"""

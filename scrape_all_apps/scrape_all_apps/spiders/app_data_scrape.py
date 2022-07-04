@@ -81,20 +81,18 @@ class AppDataScrapeSpider(scrapy.spiders.SitemapSpider):
         if app_pricing_string is not None:
             app_pricing_string = app_pricing_string.strip()
 
-        free_trial = response.xpath(
-            "//span[@class='app-listing-title__sub-heading']//text()").get()
-        price_packages_tier_name = response.xpath(
-            "//div[@class='pricing-plan-card__title']//p//text()").getall()
-        price_packages = response.xpath(
-            "//div[@class='pricing-plan-card__title']//h3[@class='pricing-plan-card__title-header']//text()").getall()
+        # price_packages_description = response.xpath(
+        #     "//div[@class='pricing-plan-card__title']//p//text()").getall()
 
-        price_packages = None
-        price_packaes_details_list = None
+        # price_packages = response.xpath(
+        #     "//h3[@class='pricing-plan-card__title-header']").getall()
 
-        price_packages = response.xpath(
-            "//h3[@class='pricing-plan-card__title-header']").getall()
+        # num_of_price_plans = len(price_packages)
 
-        num_of_price_plans = len(price_packages)
+        price_free_tag = response.xpath(
+            "//div[@class='vc-app-listing-hero__pricing ']//div//text()").get()
+
+        print("PRICE_FREE_TAG", price_free_tag)
 
         date_published = response.xpath(
             "(//div[@class='block__content']//span[@class='vc-app-listing-about-section__published-date__text'])[1]//text()").get().strip()
@@ -166,5 +164,5 @@ class AppDataScrapeSpider(scrapy.spiders.SitemapSpider):
             app_url=app_url,
             app_published_date=date_published,
             app_integrated_apps=integrations_list,
-
+            app_monetized_bool="monetized_bool",
         )

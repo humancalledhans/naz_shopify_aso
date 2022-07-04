@@ -20,7 +20,7 @@ class ScrapeAllKeybenefitsPipeline:
             app_id VARCHAR(65535) NOT NULL,
             title VARCHAR(65535) NOT NULL,
             benefit_description VARCHAR(65535),
-            scraped_date_time DATE
+            scraped_date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         );
         """
 
@@ -44,12 +44,10 @@ class ScrapeAllKeybenefitsPipeline:
         benefit_description_index = columns.index('benefit_description')
         benefit_description = values[benefit_description_index]
 
-        scraped_date_time = datetime.now()
-
-        values = (app_id, title, benefit_description, scraped_date_time)
+        values = (app_id, title, benefit_description)
         insert_stmt = """
-        INSERT INTO key_benefit ( app_id, title, benefit_description, scraped_date_time ) 
-        VALUES ( %s, %s, %s, %s )
+        INSERT INTO key_benefit ( app_id, title, benefit_description ) 
+        VALUES ( %s, %s, %s )
         """
 
         cursor.execute(create_table_statement)

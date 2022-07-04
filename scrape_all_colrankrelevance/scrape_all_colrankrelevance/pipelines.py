@@ -1,6 +1,5 @@
 import mysql.connector
 from .items import CollectionRankingRelevance
-from datetime import datetime
 
 
 class ScrapeAllColrankrelevancePipeline:
@@ -48,7 +47,7 @@ class ScrapeAllColrankrelevancePipeline:
         values = (collection_id, ranking, app_id)
 
         insert_stmt = """
-            INSERT INTO col_rank_relevance_data ( collection_id, ranking, app_id ) VALUES ( %s, %s, %s )
+            INSERT INTO col_rank_relevance ( col_id, ranking, app_id ) VALUES ( %s, %s, %s )
             """
 
         cursor.execute(create_table_statement)

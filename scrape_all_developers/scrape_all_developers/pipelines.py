@@ -60,7 +60,7 @@ class ScrapeAllDevelopersPipeline:
                   dev_average_rating, dev_partners_href, dev_experience, dev_website)
 
         insert_stmt = """
-            INSERT INTO developer ( dev_id, dev_support_email, dev_support_number, dev_average_rating, dev_partners_href, dev_experience, dev_website ) VALUES ( %s, %s, %s, %s, %s, %s, %s )
+            REPLACE INTO developer ( dev_id, dev_support_email, dev_support_number, dev_average_rating, dev_partners_href, dev_experience, dev_website ) VALUES ( %s, %s, %s, %s, %s, %s, %s )
             """
 
         cursor.execute(create_table_statement)

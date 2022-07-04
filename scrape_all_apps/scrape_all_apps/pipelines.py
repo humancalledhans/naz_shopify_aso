@@ -37,7 +37,7 @@ class ScrapeAllAppsPipeline:
             app_pricing_hint VARCHAR(65535),
             app_url VARCHAR(65535),
             app_published_date DATE NOT NULL,
-            scraped_date_time DATE NOT NULL
+            scraped_date_time TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 
         );"""
 
@@ -93,14 +93,12 @@ class ScrapeAllAppsPipeline:
         date_string = values[app_published_date_index]
         app_published_date = datetime.strptime(date_string, "%B %d, %Y")
 
-        scraped_date_time = datetime.now()
-
         app_values = (app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description,
-                      app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date, scraped_date_time)
+                      app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date)
 
         insert_stmt = """
-            REPLACE INTO app ( app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date, scraped_date_time )
-            VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )
+            REPLACE INTO app ( app_id, app_logo, app_title, app_intro_vid_url, app_developer_link, app_illustration_image, app_brief_description, app_full_description, app_rating, app_num_of_reviews, app_pricing_hint, app_url, app_published_date )
+            VALUES ( %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s )
             """
 
         # print("LEN_OF_COLUMNS", len(columns))
