@@ -1,6 +1,6 @@
 import mysql.connector
 from .items import PricingPlan
-
+from .db_secrets import get_db_password
 
 class ScrapeAllPricingplansPipeline:
     def process_item(self, item, spider):
@@ -10,7 +10,7 @@ class ScrapeAllPricingplansPipeline:
             return item
 
     def upload_to_db(self, pricingplan_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+        cnx = mysql.connector.connect(user='admin', password=get_db_password(),
                                       host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 

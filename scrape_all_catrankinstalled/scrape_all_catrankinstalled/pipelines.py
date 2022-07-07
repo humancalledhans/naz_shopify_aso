@@ -2,7 +2,7 @@ import mysql.connector
 import csv
 from .items import CategoryRankingInstalled
 from datetime import datetime
-
+from .db_secrets import get_db_password
 
 class ScrapeAllCatrankinstalledPipeline:
     def process_item(self, item, spider):
@@ -12,7 +12,7 @@ class ScrapeAllCatrankinstalledPipeline:
             return item
 
     def upload_to_db(self, cat_rank_installed_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+        cnx = mysql.connector.connect(user='admin', password=get_db_password(),
                                       host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 

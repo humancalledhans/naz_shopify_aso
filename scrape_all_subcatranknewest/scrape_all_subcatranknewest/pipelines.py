@@ -1,14 +1,8 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-
-
-# useful for handling different item types with a single interface
 import csv
 import mysql.connector
 from datetime import datetime
 from .items import SubCategoryRankingNewest
+from .db_secrets import get_db_password
 
 
 class ScrapeAllSubcatranknewestPipeline:
@@ -18,7 +12,7 @@ class ScrapeAllSubcatranknewestPipeline:
             return item
 
     def upload_to_db(self, subcatranknewest_data):
-        cnx = mysql.connector.connect(user='admin', password='pa$$w0RD2022',
+        cnx = mysql.connector.connect(user='admin', password=get_db_password(),
                                       host='shopify-aso-free-tier.c200z18i1oar.us-east-1.rds.amazonaws.com', database='db_shopify_aso')
         cursor = cnx.cursor()
 
